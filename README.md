@@ -54,6 +54,18 @@ The library offers a range of customization options, allowing developers to tail
   />
 </span>
 
+<h2>Features:- </h2>
+<ul>
+   <li>Easy to use</li>
+   <li>Customizable</li>
+   <li>Three differnt view options : Text with prefix, Text without prefix, and Only Flag</li>
+   <li>Can search using country name or code</li>
+   <li>Supoport languages such as : English, Korean, Spanish, Chinese</li>
+</ul>
+
+*Other laguages coming soon*
+
+
 
 <h2>How to use:- </h2>
 To get a Git project into your build:
