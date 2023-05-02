@@ -1,4 +1,9 @@
-<Span><h1>Country Code Chooser (Jetpack Compose)</h1></span><span style="margin-left:25.px"><img src="https://jitpack.io/v/ParveshSandila/CountryCodeChooser.svg"/></span>
+<Span><h1>Country Code Chooser (Jetpack Compose)</h1></span>
+<span style="margin-left:25.px">
+ <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">
+  <img src="https://jitpack.io/v/ParveshSandila/CountryCodeChooser.svg"/>
+ </a>
+</span>
 
 The Android library is designed to provide a user-friendly interface for selecting country codes from various countries. The library is specifically built to work seamlessly with Android Jetpack Compose, allowing developers to quickly and easily integrate it into their projects.
 
