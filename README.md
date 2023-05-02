@@ -84,7 +84,7 @@ Step 2. Add the dependency
 
 ```kotlin
 dependencies {
-    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0'
+    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.1'
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_black">Click here to check on jitpack.io</a>
