@@ -1,4 +1,9 @@
-<h1>Country Code Chooser (Jetpack Compose)</h1>
+<Span><h1>Country Code Chooser (Jetpack Compose)</h1></span>
+<span style="margin-left:25.px">
+ <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">
+  <img src="https://jitpack.io/v/ParveshSandila/CountryCodeChooser.svg"/>
+ </a>
+</span>
 
 The Android library is designed to provide a user-friendly interface for selecting country codes from various countries. The library is specifically built to work seamlessly with Android Jetpack Compose, allowing developers to quickly and easily integrate it into their projects.
 
@@ -60,7 +65,7 @@ The library offers a range of customization options, allowing developers to tail
    <li>Customizable</li>
    <li>Three differnt view options : Text with prefix, Text without prefix, and Only Flag</li>
    <li>Can search using country name or code</li>
-   <li>Supoport languages such as : English, Korean, Spanish, Chinese</li>
+   <li>Support languages: English, Korean, Spanish, Chinese, Hindi</li>
 </ul>
 
 *Other laguages coming soon*
@@ -84,7 +89,27 @@ Step 2. Add the dependency
 
 ```kotlin
 dependencies {
-    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0'
+    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.1'
 }
 ```
-<a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_black">Click here to check on jitpack.io</a>
+<a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
+
+<h2>License</h2>
+
+<a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache Version 2.0</a>
+
+```html
+Copyright (C) 2023 Parvesh Sandila
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
