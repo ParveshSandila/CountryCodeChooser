@@ -65,7 +65,7 @@ The library offers a range of customization options, allowing developers to tail
    <li>Customizable</li>
    <li>Three differnt view options : Text with prefix, Text without prefix, and Only Flag</li>
    <li>Can search using country name or code</li>
-   <li>Supoport languages such as : English, Korean, Spanish, Chinese</li>
+   <li>Supoport languages such as : English, Korean, Spanish, Chinese, Hindi</li>
 </ul>
 
 *Other laguages coming soon*
