@@ -59,6 +59,8 @@ The library offers a range of customization options, allowing developers to tail
   />
 </span>
 
+<h2>Like this? Spread ❤️ by adding a ⭐ on this project.</h2>
+
 <h2>Features:- </h2>
 
 <ul>
@@ -92,8 +94,6 @@ dependencies {
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
-
-Like this? Spread ❤️ by adding a ⭐ on this project.
 
 <h2>Language Contributions:- </h2>
 <span><b>Franch:</b></snap></span><a href="https://github.com/VJubert"> Valentin Jubert</a></span>
