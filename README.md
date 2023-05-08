@@ -60,6 +60,7 @@ The library offers a range of customization options, allowing developers to tail
 </span>
 
 <h2>Features:- </h2>
+
 <ul>
    <li>Easy to use</li>
    <li>Customizable</li>
@@ -69,8 +70,6 @@ The library offers a range of customization options, allowing developers to tail
 </ul>
 
 *Other languages coming soon*
-
-
 
 <h2>How to use:- </h2>
 To get a Git project into your build:
@@ -93,6 +92,9 @@ dependencies {
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
+
+<h2>Language Contributions:- </h2>
+<span><b>Franch:</b></snap></span><a href="https://github.com/VJubert"> Valentin Jubert</a></span>
 
 <h2>License</h2>
 
