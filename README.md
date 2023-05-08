@@ -66,7 +66,7 @@ The library offers a range of customization options, allowing developers to tail
    <li>Customizable</li>
    <li>Three different view options : Text with prefix, Text without prefix, and Only Flag</li>
    <li>Can search using country name or code</li>
-   <li>Support languages: English, Korean, Spanish, Chinese, Hindi, Japanese, French </li>
+   <li>Support languages: English, Korean, Spanish, Chinese, Hindi, Japanese, French, German </li>
 </ul>
 
 *Other languages coming soon*
@@ -92,6 +92,8 @@ dependencies {
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
+
+Like this? Spread ❤️ by adding a ⭐ on this project.
 
 <h2>Language Contributions:- </h2>
 <span><b>Franch:</b></snap></span><a href="https://github.com/VJubert"> Valentin Jubert</a></span>
