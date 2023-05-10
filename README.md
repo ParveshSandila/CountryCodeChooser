@@ -59,6 +59,8 @@ The library offers a range of customization options, allowing developers to tail
   />
 </span>
 
+<h2>Like this? Spread ❤️ by adding a ⭐ on this project.</h2>
+
 <h2>Features:- </h2>
 
 <ul>
@@ -66,7 +68,7 @@ The library offers a range of customization options, allowing developers to tail
    <li>Customizable</li>
    <li>Three different view options : Text with prefix, Text without prefix, and Only Flag</li>
    <li>Can search using country name or code</li>
-   <li>Support languages: English, Korean, Spanish, Chinese, Hindi, Japanese, French </li>
+   <li>Support languages: English, Korean, Spanish, Chinese, Hindi, Japanese, French, German </li>
 </ul>
 
 *Other languages coming soon*
