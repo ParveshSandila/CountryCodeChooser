@@ -109,7 +109,10 @@ dependencies {
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
 
 <h2>Language Contributions:- </h2>
-<span><b>Franch:</b></snap></span><a href="https://github.com/VJubert"> Valentin Jubert</a></span>
+<ul>
+ <li><span><b>Franch:</b></snap></span><a href="https://github.com/VJubert"> Valentin Jubert</a></span></li>
+ <li><span><b>Portuguese:</b></snap></span><a href="https://github.com/GuilhE"> Guilherme Delgado</a></span></li>
+</ul>
 
 <h2>License</h2>
 
