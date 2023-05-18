@@ -103,7 +103,7 @@ Step 2. Add the dependency
 
 ```kotlin
 dependencies {
-    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.1'
+    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.2'
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
