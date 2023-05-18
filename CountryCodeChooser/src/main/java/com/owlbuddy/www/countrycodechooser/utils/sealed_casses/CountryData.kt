@@ -984,9 +984,10 @@ sealed class CountryData(
     object Mauritania : CountryData(
         R.string.mauritania,
         R.drawable.mauritania_flag,
-        "MR",
         "+222",
-        "222"
+        "222",
+        "MR",
+        "MRT"
     )
         
     object Mauritius : CountryData(
@@ -1739,9 +1740,10 @@ sealed class CountryData(
     object Venezuela : CountryData(
         R.string.venezuela,
         R.drawable.venezuela_flag,
-        "VE",
         "+58",
-        "58"
+        "58",
+        "VE",
+        "VEN"
     )
         
     object Yemen : CountryData(
