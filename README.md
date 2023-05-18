@@ -23,10 +23,10 @@ The library offers a range of customization options, allowing developers to tail
            shape = RoundedCornerShape(5.dp),
            color = Color.Gray
         ),
-    defaultCountryCode = "1",
+    defaultCountry = "CA",
     countryCodeType = CountryCodeType.FLAG,
-    onCountyCodeSelected = { code, codeWithPrefix ->
-         Log.d("SelectedCountry","$code, $codeWithPrefix")
+    onCountySelected = { countryCodeWithoutPrefix, iso2Code, iso3Code ->
+        Log.d("SelectedCountry","$countryCodeWithoutPrefix, $iso2Code, $iso3Code")
     }
 )
 ```
