@@ -984,7 +984,7 @@ sealed class CountryData(
     object Mauritania : CountryData(
         R.string.mauritania,
         R.drawable.mauritania_flag,
-        "mr",
+        "MR",
         "+222",
         "222"
     )
@@ -1739,7 +1739,7 @@ sealed class CountryData(
     object Venezuela : CountryData(
         R.string.venezuela,
         R.drawable.venezuela_flag,
-        "ve",
+        "VE",
         "+58",
         "58"
     )
