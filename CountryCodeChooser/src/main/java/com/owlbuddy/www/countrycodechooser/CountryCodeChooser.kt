@@ -39,7 +39,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun CountryCodeChooser(
     modifier: Modifier = Modifier,
-    defaultCountryCodeWithoutPrefix: String = "1",
+    defaultCountry: String = "US",
     flagSize: DpSize = DpSize(
         height = 20.dp,
         width = 30.dp
@@ -48,7 +48,11 @@ fun CountryCodeChooser(
         fontSize = 16.sp
     ),
     countryCodeType: CountryCodeType = CountryCodeType.FLAG,
-    onCountyCodeSelected: (countryData: CountryData) -> Unit
+    onCountySelected: (
+        countryCodeWithoutPrefix: String,
+        iso2Code: String,
+        iso3Code: String
+    ) -> Unit
 ) {
 
     var selectedCountry by remember {
@@ -69,8 +73,8 @@ fun CountryCodeChooser(
         }
     }
 
-    LaunchedEffect(key1 = defaultCountryCodeWithoutPrefix, key2 = listOfCountryData){
-        listOfCountryData.firstOrNull { it.countryCodeWithoutPrefix == defaultCountryCodeWithoutPrefix }?.let {
+    LaunchedEffect(key1 = defaultCountry, key2 = listOfCountryData){
+        listOfCountryData.firstOrNull { it.iso2Code.equals(defaultCountry,true) || it.iso3Code.equals(defaultCountry,true)}?.let {
             selectedCountry = it
         }
     }
@@ -127,7 +131,11 @@ fun CountryCodeChooser(
             onCountrySelected = {
                 selectedCountry = it
                 popupState = false
-                onCountyCodeSelected(it)
+                onCountySelected(
+                    it.countryCodeWithoutPrefix,
+                    it.iso2Code,
+                    it.iso3Code
+                )
             },
             onDismissRequest = {
                 popupState = false

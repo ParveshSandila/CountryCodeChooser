@@ -133,6 +133,7 @@
     <string name="oman">Oman</string>
     <string name="pakistan">Pakistan</string>
     <string name="palau">Palaos</string>
+    <string name="palestine">Palestine</string>
     <string name="panama">Panama</string>
     <string name="papua_new_guinea">Papouasie-Nouvelle-Guinée</string>
     <string name="paraguay">Paraguay</string>
@@ -196,5 +197,6 @@
     <string name="yemen">Yémen</string>
     <string name="zambia">Zambie</string>
     <string name="zimbabwe">Zimbabwe</string>
+
     <string name="search_county_code">Recherche Pays/Code</string>
 </resources>

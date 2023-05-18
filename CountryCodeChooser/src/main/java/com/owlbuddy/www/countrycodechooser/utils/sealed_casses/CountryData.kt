@@ -6,7 +6,7 @@ sealed class CountryData(
     val flagResId: Int,
     val countryCodeWithPrefix: String,
     val countryCodeWithoutPrefix: String,
-    val iso2 : String,
+    val iso2Code : String,
     val iso3Code : String
 ) {
     object Afghanistan : CountryData(
