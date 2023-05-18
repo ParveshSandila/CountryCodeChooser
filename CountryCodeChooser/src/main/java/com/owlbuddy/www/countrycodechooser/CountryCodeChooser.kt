@@ -39,7 +39,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun CountryCodeChooser(
     modifier: Modifier = Modifier,
-    defaultCountry: String = "US",
+    defaultCountry: String = "CA",
     flagSize: DpSize = DpSize(
         height = 20.dp,
         width = 30.dp
