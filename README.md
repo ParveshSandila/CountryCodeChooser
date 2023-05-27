@@ -114,6 +114,16 @@ dependencies {
  <li><span><b>Portuguese:</b></snap></span><a href="https://github.com/GuilhE"> Guilherme Delgado</a></span></li>
 </ul>
 
+<h2>Contributions</h2>
+<p>Contributions to the CountryCodeChooser library are highly appreciated! If you have any bug fixes, new features, or improvements to offer, please feel free to submit a pull request. Together, we can make this library even better.</p>
+
+<h2>Contact</h2>
+<p>For any inquiries or support regarding the library, you can reach out to the author, Parvesh Sandila, via email at parveshsandila@example.com.</p>
+
+<p>Let the CountryCodeChooser Android Library enhance your app with seamless country code selection. Download it now and give your users a convenient and efficient experience.</p>
+
+#AndroidDevelopment #CountryCodeSelection #OpenSourceLibrary #CountryCodeChooser #JetpackCompose #ComposeLibraray
+
 <h2>License</h2>
 
 <a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache Version 2.0</a>
