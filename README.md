@@ -4,7 +4,16 @@
   <img src="https://jitpack.io/v/ParveshSandila/CountryCodeChooser.svg"/>
  </a>
 </span>
-
+<span>
+[![GitHub stars](https://img.shields.io/github/stars/ParveshSandila/CountryCodeChooser.svg)](https://github.com/ParveshSandila/CountryCodeChooser/stargazers)
+ </span>
+ <span>
+[![GitHub issues](https://img.shields.io/github/issues/ParveshSandila/CountryCodeChooser.svg)](https://github.com/ParveshSandila/CountryCodeChooser/issues)
+ </span>
+ <span>
+<!-- [![GitHub license](https://img.shields.io/github/license/ParveshSandila/CountryCodeChooser.svg)](https://github.com/ParveshSandila/CountryCodeChooser/blob/master/LICENSE)
+ </span>
+ -->
 The Android library is designed to provide a user-friendly interface for selecting country codes from various countries. The library is specifically built to work seamlessly with Android Jetpack Compose, allowing developers to quickly and easily integrate it into their projects.
 
 One of the standout features of this library is its built-in support for displaying a flag for each country. This is especially useful when building international apps where users may not be familiar with the country codes of other regions.
@@ -118,7 +127,7 @@ dependencies {
 <p>Contributions to the CountryCodeChooser library are highly appreciated! If you have any bug fixes, new features, or improvements to offer, please feel free to submit a pull request. Together, we can make this library even better.</p>
 
 <h2>Contact</h2>
-<p>For any inquiries or support regarding the library, you can reach out to the author, Parvesh Sandila, via email at parveshsandila@example.com.</p>
+<p>For any inquiries or support regarding the library, you can reach out to the author, Parvesh Sandila, via email at parveshsandila@gamil.com.</p>
 
 <p>Let the CountryCodeChooser Android Library enhance your app with seamless country code selection. Download it now and give your users a convenient and efficient experience.</p>
 
