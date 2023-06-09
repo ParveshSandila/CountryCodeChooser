@@ -85,9 +85,11 @@ The library offers a range of customization options, allowing developers to tail
         <li>French</li>
         <li>German</li>
         <li>Hindi</li>
+        <li>Italian</li>
         <li>Japanese</li>
         <li>Korean</li>
         <li>Portuguese</li>
+        <li>Punjabi</li>
         <li>Spanish</li>
       </ul>
    </li>
