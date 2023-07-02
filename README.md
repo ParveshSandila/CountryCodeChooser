@@ -85,9 +85,11 @@ The library offers a range of customization options, allowing developers to tail
         <li>French</li>
         <li>German</li>
         <li>Hindi</li>
+        <li>Italian</li>
         <li>Japanese</li>
         <li>Korean</li>
         <li>Portuguese</li>
+        <li>Punjabi</li>
         <li>Spanish</li>
       </ul>
    </li>
@@ -127,7 +129,7 @@ dependencies {
 <p>Contributions to the CountryCodeChooser library are highly appreciated! If you have any bug fixes, new features, or improvements to offer, please feel free to submit a pull request. Together, we can make this library even better.</p>
 
 <h2>Contact</h2>
-<p>For any inquiries or support regarding the library, you can reach out to the author, Parvesh Sandila, via email at parveshsandila@gamil.com.</p>
+<p>For any inquiries or support regarding the library, you can reach out to the author, Parvesh Sandila, via email at parveshsandila@gmail.com.</p>
 
 <p>Let the CountryCodeChooser Android Library enhance your app with seamless country code selection. Download it now and give your users a convenient and efficient experience.</p>
 
