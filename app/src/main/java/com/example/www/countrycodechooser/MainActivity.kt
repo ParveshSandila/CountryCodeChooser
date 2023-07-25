@@ -78,7 +78,7 @@ class MainActivity : ComponentActivity() {
                                        shape = RoundedCornerShape(5.dp),
                                        color = Color.Gray
                                     ),
-                                defaultCountry = "CAN",
+                                defaultCountryIsoCode = "CAN",
                                 countryCodeType = CountryCodeType.FLAG,
                                 onCountrySelected = {
                                     with(it){

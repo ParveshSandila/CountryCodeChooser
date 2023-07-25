@@ -47,52 +47,30 @@ import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
 import com.owlbuddy.www.countrycodechooser.utils.enums.CountryCodeType
 import com.owlbuddy.www.countrycodechooser.utils.sealed_casses.CountryData
+import com.owlbuddy.www.countrycodechooser.utils.sealed_casses.getAllCountries
 import kotlinx.coroutines.delay
 
 @Composable
 fun CountryCodeChooser(
     modifier: Modifier = Modifier,
-    defaultCountry: String = "CA",
-    flagSize: DpSize = DpSize(
-        height = 20.dp,
-        width = 30.dp
-    ),
-    textStyle: TextStyle = TextStyle(
-        fontSize = 16.sp
-    ),
+    defaultCountryIsoCode: String = CountryData.Afghanistan.iso2Code,
+    flagSize: DpSize = DpSize(height = 20.dp, width = 30.dp),
+    textStyle: TextStyle = TextStyle(fontSize = 16.sp),
     countryCodeType: CountryCodeType = CountryCodeType.FLAG,
     onCountrySelected: (country: CountryData) -> Unit
 ) {
+    var selectedCountry by remember { mutableStateOf<CountryData?>(null) }
+    var popupState by remember { mutableStateOf(false) }
+    val listOfCountryData by remember { mutableStateOf(getAllCountries()) }
 
-    var selectedCountry by remember {
-        mutableStateOf<CountryData?>(null)
-    }
-
-    var popupState by remember {
-        mutableStateOf(false)
-    }
-
-    var listOfCountryData by remember {
-        mutableStateOf<List<CountryData>>(emptyList())
-    }
-
-    LaunchedEffect(key1 = true) {
-        listOfCountryData = CountryData::class.sealedSubclasses.mapNotNull {
-            it.objectInstance
-        }
-    }
-
-    LaunchedEffect(key1 = defaultCountry, key2 = listOfCountryData) {
-        listOfCountryData.firstOrNull { it.iso2Code.equals(defaultCountry, true) || it.iso3Code.equals(defaultCountry, true) }?.let {
-            selectedCountry = it
-        }
+    LaunchedEffect(key1 = defaultCountryIsoCode) {
+        listOfCountryData.firstOrNull {
+            it.iso2Code.equals(defaultCountryIsoCode, true) || it.iso3Code.equals(defaultCountryIsoCode, true)
+        }?.let { selectedCountry = it }
     }
 
     Box(
-        modifier = modifier
-            .clickable {
-                popupState = true
-            },
+        modifier = modifier.clickable { popupState = true },
         contentAlignment = Alignment.Center
     ) {
         when (countryCodeType) {
@@ -110,9 +88,7 @@ fun CountryCodeChooser(
                     maxLines = 1,
                     enabled = false,
                     readOnly = true,
-                    textStyle = textStyle.copy(
-                        textAlign = TextAlign.Center
-                    ),
+                    textStyle = textStyle.copy(textAlign = TextAlign.Center),
                     onValueChange = {}
                 )
             }
@@ -123,9 +99,7 @@ fun CountryCodeChooser(
                         modifier = Modifier
                             .width(flagSize.width)
                             .height(flagSize.height)
-                            .clip(
-                                RoundedCornerShape(2.dp)
-                            ),
+                            .clip(RoundedCornerShape(2.dp)),
                         painter = painterResource(id = countryData.flagResId),
                         contentScale = ContentScale.FillBounds,
                         contentDescription = "Country Flag"
@@ -143,9 +117,7 @@ fun CountryCodeChooser(
                 popupState = false
                 onCountrySelected(it)
             },
-            onDismissRequest = {
-                popupState = false
-            }
+            onDismissRequest = { popupState = false }
         )
     }
 }
@@ -156,15 +128,9 @@ private fun CountriesPopup(
     onCountrySelected: (CountryData) -> Unit,
     onDismissRequest: () -> Unit
 ) {
-    var searchedText by remember {
-        mutableStateOf("")
-    }
-
-    var filteredList by remember {
-        mutableStateOf(listOfCountryData)
-    }
-
     val context = LocalContext.current
+    var searchedText by remember { mutableStateOf("") }
+    var filteredList by remember { mutableStateOf(listOfCountryData) }
 
     LaunchedEffect(key1 = searchedText) {
         delay(200)
@@ -176,21 +142,14 @@ private fun CountriesPopup(
 
     Popup(
         alignment = Alignment.Center,
-        properties = PopupProperties(
-            focusable = true
-        ),
-        onDismissRequest = {
-            onDismissRequest()
-        },
+        properties = PopupProperties(focusable = true),
+        onDismissRequest = { onDismissRequest() },
     ) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(
-                    15.dp
-                )
+                .padding(15.dp)
         ) {
-
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -198,9 +157,7 @@ private fun CountriesPopup(
                         color = Color(0xFFE9E9E9),
                         shape = RoundedCornerShape(10.dp)
                     )
-                    .padding(
-                        20.dp
-                    )
+                    .padding(20.dp)
             ) {
                 OutlinedTextField(
                     modifier = Modifier.fillMaxWidth(),
@@ -215,23 +172,15 @@ private fun CountriesPopup(
                     singleLine = true,
                     maxLines = 1,
                     enabled = true,
-                    keyboardOptions = KeyboardOptions(
-                        keyboardType = KeyboardType.Text
-                    ),
-                    onValueChange = {
-                        searchedText = it
-                    }
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
+                    onValueChange = { searchedText = it }
                 )
-
                 Spacer(modifier = Modifier.height(10.dp))
-
                 LazyColumn {
-                    items(filteredList) { countryData ->
+                    items(items = filteredList, key = { it.countryCode }) { countryData ->
                         ListItem(
                             countryData = countryData,
-                            onClick = {
-                                onCountrySelected(it)
-                            }
+                            onClick = { onCountrySelected(it) }
                         )
                     }
                 }
@@ -251,18 +200,14 @@ private fun ListItem(
             .clickable {
                 onClick(countryData)
             }
-            .padding(
-                vertical = 15.dp,
-            ),
+            .padding(vertical = 15.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
             modifier = Modifier
                 .width(30.dp)
                 .height(20.dp)
-                .clip(
-                    RoundedCornerShape(2.dp)
-                ),
+                .clip(RoundedCornerShape(2.dp)),
             painter = painterResource(id = countryData.flagResId),
             contentScale = ContentScale.FillBounds,
             contentDescription = "Country Flag"
@@ -277,9 +222,7 @@ private fun ListItem(
                         color = Color.Gray,
                         fontWeight = FontWeight.Medium
                     )
-                ) {
-                    append("(${countryData.countryCodeWithPrefix}) ")
-                }
+                ) { append("(${countryData.countryCodeWithPrefix}) ") }
                 append(stringResource(id = countryData.countryNameResId))
             },
             style = TextStyle(

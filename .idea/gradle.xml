@@ -4,17 +4,55 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/build-logic" name="build-logic">
+                <projects>
+                  <project path="$PROJECT_DIR$/build-logic" />
+                  <project path="$PROJECT_DIR$/build-logic/conventions" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="Android Studio default JDK" />
+        <option name="gradleJvm" value="11" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/CountryCodeChooser" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/build-logic" />
+            <option value="$PROJECT_DIR$/build-logic/conventions" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/core-behaviors" />
+            <option value="$PROJECT_DIR$/core/core-network" />
+            <option value="$PROJECT_DIR$/core/core-network-exceptions" />
+            <option value="$PROJECT_DIR$/core/core-network-interceptors" />
+            <option value="$PROJECT_DIR$/core/core-ui-widgets" />
+            <option value="$PROJECT_DIR$/core/core-utils" />
+            <option value="$PROJECT_DIR$/data" />
+            <option value="$PROJECT_DIR$/data/data-cache-database" />
+            <option value="$PROJECT_DIR$/data/data-cache-sharedprefs" />
+            <option value="$PROJECT_DIR$/data/data-managers" />
+            <option value="$PROJECT_DIR$/data/data-models" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features-base-classes" />
+            <option value="$PROJECT_DIR$/features-resources" />
+            <option value="$PROJECT_DIR$/features/authentication" />
+            <option value="$PROJECT_DIR$/features/authentication/feature-authentication" />
+            <option value="$PROJECT_DIR$/features/clients" />
+            <option value="$PROJECT_DIR$/features/clients/feature-clients" />
+            <option value="$PROJECT_DIR$/features/overview" />
+            <option value="$PROJECT_DIR$/features/overview/feature-overview" />
+            <option value="$PROJECT_DIR$/features/settings" />
+            <option value="$PROJECT_DIR$/features/settings/feature-settings" />
+            <option value="$PROJECT_DIR$/features/timesheet" />
+            <option value="$PROJECT_DIR$/features/timesheet/feature-timesheet" />
           </set>
         </option>
+        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
