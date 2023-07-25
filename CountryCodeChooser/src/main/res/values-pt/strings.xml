@@ -55,6 +55,7 @@
     <string name="equatorial_guinea">Guiné Equatorial</string>
     <string name="eritrea">Eritreia</string>
     <string name="estonia">Estónia</string>
+    <string name="eswatini">Eswatini</string>
     <string name="ethiopia">Etiópia</string>
     <string name="fiji">Fiji</string>
     <string name="finland">Finlândia</string>
@@ -81,6 +82,7 @@
     <string name="ireland">Irlanda</string>
     <string name="israel">Israel</string>
     <string name="italy">Itália</string>
+    <string name="ivory_coast">Costa do Marfim</string>
     <string name="jamaica">Jamaica</string>
     <string name="japan">Japão</string>
     <string name="jordan">Jordânia</string>
@@ -173,6 +175,7 @@
     <string name="tajikistan">Tajiquistão</string>
     <string name="tanzania">Tanzânia</string>
     <string name="thailand">Tailândia</string>
+    <string name="timor_leste">Timor-Leste (ex-Timor Leste)</string>
     <string name="togo">Togo</string>
     <string name="tonga">Tonga</string>
     <string name="trinidad_and_tobago">Trindade e Tobago</string>
@@ -194,5 +197,6 @@
     <string name="yemen">Iémen</string>
     <string name="zambia">Zâmbia</string>
     <string name="zimbabwe">Zimbabué</string>
+
     <string name="search_county_code">Procurar por País/Código</string>
 </resources>		

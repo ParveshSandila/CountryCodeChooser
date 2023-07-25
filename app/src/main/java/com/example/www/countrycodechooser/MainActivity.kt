@@ -78,10 +78,10 @@ class MainActivity : ComponentActivity() {
                                        shape = RoundedCornerShape(5.dp),
                                        color = Color.Gray
                                     ),
-                                defaultCountryCode = "1",
+                                defaultCountry = "CAN",
                                 countryCodeType = CountryCodeType.FLAG,
-                                onCountyCodeSelected = { code, codeWithPrefix ->
-                                    Log.d("SelectedCountry","$code, $codeWithPrefix")
+                                onCountySelected = { countryCodeWithoutPrefix, iso2Code, iso3Code ->
+                                    Log.d("SelectedCountry","$countryCodeWithoutPrefix, $iso2Code, $iso3Code")
                                 }
                             )
 

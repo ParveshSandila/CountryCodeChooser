@@ -4,7 +4,16 @@
   <img src="https://jitpack.io/v/ParveshSandila/CountryCodeChooser.svg"/>
  </a>
 </span>
-
+<span>
+[![GitHub stars](https://img.shields.io/github/stars/ParveshSandila/CountryCodeChooser.svg)](https://github.com/ParveshSandila/CountryCodeChooser/stargazers)
+ </span>
+ <span>
+[![GitHub issues](https://img.shields.io/github/issues/ParveshSandila/CountryCodeChooser.svg)](https://github.com/ParveshSandila/CountryCodeChooser/issues)
+ </span>
+ <span>
+<!-- [![GitHub license](https://img.shields.io/github/license/ParveshSandila/CountryCodeChooser.svg)](https://github.com/ParveshSandila/CountryCodeChooser/blob/master/LICENSE)
+ </span>
+ -->
 The Android library is designed to provide a user-friendly interface for selecting country codes from various countries. The library is specifically built to work seamlessly with Android Jetpack Compose, allowing developers to quickly and easily integrate it into their projects.
 
 One of the standout features of this library is its built-in support for displaying a flag for each country. This is especially useful when building international apps where users may not be familiar with the country codes of other regions.
@@ -23,10 +32,10 @@ The library offers a range of customization options, allowing developers to tail
            shape = RoundedCornerShape(5.dp),
            color = Color.Gray
         ),
-    defaultCountryCode = "1",
+    defaultCountry = "CA",
     countryCodeType = CountryCodeType.FLAG,
-    onCountyCodeSelected = { code, codeWithPrefix ->
-         Log.d("SelectedCountry","$code, $codeWithPrefix")
+    onCountySelected = { countryCodeWithoutPrefix, iso2Code, iso3Code ->
+        Log.d("SelectedCountry","$countryCodeWithoutPrefix, $iso2Code, $iso3Code")
     }
 )
 ```
@@ -76,9 +85,11 @@ The library offers a range of customization options, allowing developers to tail
         <li>French</li>
         <li>German</li>
         <li>Hindi</li>
+        <li>Italian</li>
         <li>Japanese</li>
         <li>Korean</li>
         <li>Portuguese</li>
+        <li>Punjabi</li>
         <li>Spanish</li>
       </ul>
    </li>
@@ -103,7 +114,7 @@ Step 2. Add the dependency
 
 ```kotlin
 dependencies {
-    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.1'
+    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.2'
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
@@ -113,6 +124,16 @@ dependencies {
  <li><span><b>Franch:</b></snap></span><a href="https://github.com/VJubert"> Valentin Jubert</a></span></li>
  <li><span><b>Portuguese:</b></snap></span><a href="https://github.com/GuilhE"> Guilherme Delgado</a></span></li>
 </ul>
+
+<h2>Contributions</h2>
+<p>Contributions to the CountryCodeChooser library are highly appreciated! If you have any bug fixes, new features, or improvements to offer, please feel free to submit a pull request. Together, we can make this library even better.</p>
+
+<h2>Contact</h2>
+<p>For any inquiries or support regarding the library, you can reach out to the author, Parvesh Sandila, via email at parveshsandila@gmail.com.</p>
+
+<p>Let the CountryCodeChooser Android Library enhance your app with seamless country code selection. Download it now and give your users a convenient and efficient experience.</p>
+
+#AndroidDevelopment #CountryCodeSelection #OpenSourceLibrary #CountryCodeChooser #JetpackCompose #ComposeLibraray
 
 <h2>License</h2>
 
