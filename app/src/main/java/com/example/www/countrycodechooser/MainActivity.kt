@@ -80,8 +80,10 @@ class MainActivity : ComponentActivity() {
                                     ),
                                 defaultCountry = "CAN",
                                 countryCodeType = CountryCodeType.FLAG,
-                                onCountySelected = { countryCodeWithoutPrefix, iso2Code, iso3Code ->
-                                    Log.d("SelectedCountry","$countryCodeWithoutPrefix, $iso2Code, $iso3Code")
+                                onCountrySelected = {
+                                    with(it){
+                                        Log.d("SelectedCountry","$countryCode, $iso2Code, $iso3Code")
+                                    }
                                 }
                             )
 

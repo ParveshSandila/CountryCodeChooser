@@ -61,11 +61,7 @@ fun CountryCodeChooser(
         fontSize = 16.sp
     ),
     countryCodeType: CountryCodeType = CountryCodeType.FLAG,
-    onCountySelected: (
-        countryCodeWithoutPrefix: String,
-        iso2Code: String,
-        iso3Code: String
-    ) -> Unit
+    onCountrySelected: (country: CountryData) -> Unit
 ) {
 
     var selectedCountry by remember {
@@ -80,14 +76,14 @@ fun CountryCodeChooser(
         mutableStateOf<List<CountryData>>(emptyList())
     }
 
-    LaunchedEffect(key1 = true){
+    LaunchedEffect(key1 = true) {
         listOfCountryData = CountryData::class.sealedSubclasses.mapNotNull {
             it.objectInstance
         }
     }
 
-    LaunchedEffect(key1 = defaultCountry, key2 = listOfCountryData){
-        listOfCountryData.firstOrNull { it.iso2Code.equals(defaultCountry,true) || it.iso3Code.equals(defaultCountry,true)}?.let {
+    LaunchedEffect(key1 = defaultCountry, key2 = listOfCountryData) {
+        listOfCountryData.firstOrNull { it.iso2Code.equals(defaultCountry, true) || it.iso3Code.equals(defaultCountry, true) }?.let {
             selectedCountry = it
         }
     }
@@ -98,15 +94,15 @@ fun CountryCodeChooser(
                 popupState = true
             },
         contentAlignment = Alignment.Center
-    ){
-        when(countryCodeType){
+    ) {
+        when (countryCodeType) {
             CountryCodeType.TEXT, CountryCodeType.TEXT_WITHOUT_PREFIX -> {
                 BasicTextField(
                     modifier = Modifier.fillMaxWidth(),
                     value = selectedCountry?.let {
-                        if(countryCodeType ==CountryCodeType.TEXT) {
+                        if (countryCodeType == CountryCodeType.TEXT) {
                             it.countryCodeWithPrefix
-                        }else{
+                        } else {
                             it.countryCode
                         }
                     } ?: "",
@@ -120,7 +116,8 @@ fun CountryCodeChooser(
                     onValueChange = {}
                 )
             }
-            CountryCodeType.FLAG-> {
+
+            CountryCodeType.FLAG -> {
                 selectedCountry?.let { countryData ->
                     Image(
                         modifier = Modifier
@@ -138,17 +135,13 @@ fun CountryCodeChooser(
         }
     }
 
-    if(popupState){
+    if (popupState) {
         CountriesPopup(
             listOfCountryData = listOfCountryData,
             onCountrySelected = {
                 selectedCountry = it
                 popupState = false
-                onCountySelected(
-                    it.countryCode,
-                    it.iso2Code,
-                    it.iso3Code
-                )
+                onCountrySelected(it)
             },
             onDismissRequest = {
                 popupState = false
@@ -159,10 +152,10 @@ fun CountryCodeChooser(
 
 @Composable
 private fun CountriesPopup(
-    listOfCountryData : List<CountryData>,
-    onCountrySelected : (CountryData) -> Unit,
-    onDismissRequest:() -> Unit
-){
+    listOfCountryData: List<CountryData>,
+    onCountrySelected: (CountryData) -> Unit,
+    onDismissRequest: () -> Unit
+) {
     var searchedText by remember {
         mutableStateOf("")
     }
@@ -173,11 +166,11 @@ private fun CountriesPopup(
 
     val context = LocalContext.current
 
-    LaunchedEffect(key1 = searchedText){
+    LaunchedEffect(key1 = searchedText) {
         delay(200)
         filteredList = listOfCountryData.filter {
-            context.getString(it.countryNameResId).contains(searchedText.trim(),true)
-                    || it.countryCodeWithPrefix.contains(searchedText.trim(),true)
+            context.getString(it.countryNameResId).contains(searchedText.trim(), true)
+                    || it.countryCodeWithPrefix.contains(searchedText.trim(), true)
         }
     }
 
@@ -196,7 +189,7 @@ private fun CountriesPopup(
                 .padding(
                     15.dp
                 )
-        ){
+        ) {
 
             Column(
                 modifier = Modifier
@@ -208,7 +201,7 @@ private fun CountriesPopup(
                     .padding(
                         20.dp
                     )
-            ){
+            ) {
                 OutlinedTextField(
                     modifier = Modifier.fillMaxWidth(),
                     value = searchedText,
@@ -232,8 +225,8 @@ private fun CountriesPopup(
 
                 Spacer(modifier = Modifier.height(10.dp))
 
-                LazyColumn{
-                    items(filteredList){ countryData ->
+                LazyColumn {
+                    items(filteredList) { countryData ->
                         ListItem(
                             countryData = countryData,
                             onClick = {
@@ -250,8 +243,8 @@ private fun CountriesPopup(
 @Composable
 private fun ListItem(
     countryData: CountryData,
-    onClick : (CountryData) -> Unit
-){
+    onClick: (CountryData) -> Unit
+) {
     Row(
         modifier = Modifier
             .fillMaxSize()
@@ -284,8 +277,8 @@ private fun ListItem(
                         color = Color.Gray,
                         fontWeight = FontWeight.Medium
                     )
-                ){
-                    append("(${countryData.countryCodeWithPrefix }) ")
+                ) {
+                    append("(${countryData.countryCodeWithPrefix}) ")
                 }
                 append(stringResource(id = countryData.countryNameResId))
             },
