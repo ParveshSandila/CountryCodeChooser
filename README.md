@@ -137,8 +137,6 @@ dependencies {
 
 <h2>License</h2>
 
-<a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache Version 2.0</a>
-
 ```html
 Copyright (c) 2026 Parvesh Sandila
 
