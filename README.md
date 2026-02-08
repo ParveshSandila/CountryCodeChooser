@@ -140,7 +140,7 @@ dependencies {
 <a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache Version 2.0</a>
 
 ```html
-Copyright (C) 2023 Parvesh Sandila
+Copyright (C) 2026 Parvesh Sandila
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
