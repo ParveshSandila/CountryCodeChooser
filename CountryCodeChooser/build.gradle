@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace 'com.owlbuddy.www.countrycodechooser'
-    compileSdk 33
+    compileSdk 35
 
     defaultConfig {
         minSdk 21
-        targetSdk 33
+        targetSdk 35
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -23,25 +23,27 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     buildFeatures {
         compose true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.11'
+    }
 }
 
 dependencies {
-    def compose_ui_version = "1.1.1"
     implementation "androidx.compose.ui:ui:$compose_ui_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
     implementation "androidx.compose.material:material:$compose_ui_version"
-    implementation "org.jetbrains.kotlin:kotlin-reflect:1.6.10"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.9.23"
 }
 
 afterEvaluate {
@@ -52,7 +54,7 @@ afterEvaluate {
 
                 groupId = 'com.github.parveshsandila'
                 artifactId = 'country-code-chooser'
-                version = '1.0.2'
+                version = '1.0.3'
             }
         }
     }
