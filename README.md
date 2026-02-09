@@ -91,6 +91,7 @@ The library offers a range of customization options, allowing developers to tail
         <li>Portuguese</li>
         <li>Punjabi</li>
         <li>Spanish</li>
+        <li>Swedish</li>
       </ul>
    </li>
 </ul>
@@ -114,7 +115,7 @@ Step 2. Add the dependency
 
 ```kotlin
 dependencies {
-    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.3'
+    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.4'
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
