@@ -22,18 +22,34 @@ The library offers a range of customization options, allowing developers to tail
 
 <h2>Example Code:- </h2>
 
+### New Variant (Recommended)
+This variant returns the full `CountryData` object, providing access to currency, capital, and more.
+
 ```kotlin
  CountryCodeChooser(
     modifier = Modifier
-        .weight(1.5f)
-        .height(55.dp)
-        .border(
-           width = 1.dp,
-           shape = RoundedCornerShape(5.dp),
-           color = Color.Gray
-        ),
+        .fillMaxWidth()
+        .height(55.dp),
     defaultCountry = "CA",
     countryCodeType = CountryCodeType.FLAG,
+    onCountryDataSelected = { countryData ->
+        Log.d("SelectedCountry", """
+            Name: ${stringResource(id = countryData.countryNameResId)}
+            Code: ${countryData.countryCodeWithPrefix}
+            Currency: ${countryData.currencyName} (${countryData.currencySymbol})
+            Capital: ${countryData.capitalCity}
+            Continent: ${countryData.continent}
+        """.trimIndent())
+    }
+)
+```
+
+### Deprecated Variant
+The original variant is deprecated and will be removed after **August 2026**.
+
+```kotlin
+ CountryCodeChooser(
+    // ... params ...
     onCountySelected = { countryCodeWithoutPrefix, iso2Code, iso3Code ->
         Log.d("SelectedCountry","$countryCodeWithoutPrefix, $iso2Code, $iso3Code")
     }
@@ -73,10 +89,16 @@ The library offers a range of customization options, allowing developers to tail
 <h2>Features:- </h2>
 
 <ul>
-   <li>Easy to use</li>
-   <li>Customizable</li>
+   <li>Easy to use & Highly Customizable</li>
+   <li>Comprehensive Country Data:
+      <ul>
+         <li>Currency Info (Code, Name, Symbol)</li>
+         <li>Capital City</li>
+         <li>Continent/Region</li>
+         <li>Phone Masking (XXX-XXX-XXXX)</li>
+      </ul>
+   </li>
    <li>Three different view options : Text with prefix, Text without prefix, and Only Flag</li>
-   <li>Can search using country name or code</li>
    <li>Support languages:
       <ul>
         <li>Arabic</li>
@@ -115,7 +137,7 @@ Step 2. Add the dependency
 
 ```kotlin
 dependencies {
-    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.4'
+    implementation 'com.github.ParveshSandila:CountryCodeChooser:1.0.5'
 }
 ```
 <a href="https://jitpack.io/#ParveshSandila/CountryCodeChooser" target="_blank">Click here to check on jitpack.io</a>
