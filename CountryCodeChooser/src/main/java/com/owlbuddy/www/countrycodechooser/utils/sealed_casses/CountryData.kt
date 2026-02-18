@@ -7,15 +7,28 @@ sealed class CountryData(
     val countryCodeWithPrefix: String,
     val countryCodeWithoutPrefix: String,
     val iso2Code : String,
-    val iso3Code : String
+    val iso3Code : String,
+    val currencyCode: String,
+    val currencyName: String,
+    val currencySymbol: String,
+    val capitalCity: String,
+    val continent: String,
+    val phoneMask: String
 ) {
+
     object Afghanistan : CountryData(
         R.string.afghanistan,
         R.drawable.afghanistan_flag,
         "+93",
         "93",
         "AF",
-        "AFG"
+        "AFG",
+        "AFN",
+        "Afghan afghani",
+        "؋",
+        "Kabul",
+        "Asia",
+        "+93-XX-XXX-XXXX"
     )
 
     object Albania : CountryData(
@@ -24,7 +37,13 @@ sealed class CountryData(
         "+355",
         "355",
         "AL",
-        "ALB"
+        "ALB",
+        "ALL",
+        "Albanian lek",
+        "L",
+        "Tirana",
+        "Europe",
+        "+355(XXX)XXX-XXX"
     )
 
     object Algeria : CountryData(
@@ -33,7 +52,13 @@ sealed class CountryData(
         "+213",
         "213",
         "DZ",
-        "DZA"
+        "DZA",
+        "DZD",
+        "Algerian dinar",
+        "د.ج",
+        "Algiers",
+        "Africa",
+        "+213-XX-XXX-XXXX"
     )
 
     object Andorra : CountryData(
@@ -42,7 +67,13 @@ sealed class CountryData(
         "+376",
         "376",
         "AD",
-        "AND"
+        "AND",
+        "EUR",
+        "euro",
+        "€",
+        "Andorra la Vella",
+        "Europe",
+        "+376-XXX-XXX"
     )
 
     object Angola : CountryData(
@@ -51,7 +82,13 @@ sealed class CountryData(
         "+244",
         "244",
         "AO",
-        "AGO"
+        "AGO",
+        "AOA",
+        "Angolan kwanza",
+        "Kz",
+        "Luanda",
+        "Africa",
+        "+244(XXX)XXX-XXX"
     )
 
     object AntiguaAndBarbuda : CountryData(
@@ -60,7 +97,13 @@ sealed class CountryData(
         "+1 268",
         "1268",
         "AG",
-        "ATG"
+        "ATG",
+        "XCD",
+        "Eastern Caribbean dollar",
+        "$",
+        "Saint John's",
+        "North America",
+        "+1(268)XXX-XXXX"
     )
 
     object Argentina : CountryData(
@@ -69,7 +112,13 @@ sealed class CountryData(
         "+54",
         "54",
         "AR",
-        "ARG"
+        "ARG",
+        "ARS",
+        "Argentine peso",
+        "$",
+        "Buenos Aires",
+        "South America",
+        "+54(XXX)XXX-XXXX"
     )
 
     object Armenia : CountryData(
@@ -78,7 +127,13 @@ sealed class CountryData(
         "+374",
         "374",
         "AM",
-        "ARM"
+        "ARM",
+        "AMD",
+        "Armenian dram",
+        "֏",
+        "Yerevan",
+        "Asia",
+        "+374-XX-XXX-XXX"
     )
 
     object Australia : CountryData(
@@ -87,7 +142,13 @@ sealed class CountryData(
         "+61",
         "61",
         "AU",
-        "AUS"
+        "AUS",
+        "AUD",
+        "Australian dollar",
+        "$",
+        "Canberra",
+        "Oceania",
+        "+61-X-XXXX-XXXX"
     )
 
     object Austria : CountryData(
@@ -96,7 +157,13 @@ sealed class CountryData(
         "+43",
         "43",
         "AT",
-        "AUT"
+        "AUT",
+        "EUR",
+        "euro",
+        "€",
+        "Vienna",
+        "Europe",
+        "+43(XXX)XXX-XXXX"
     )
 
     object Azerbaijan : CountryData(
@@ -105,7 +172,13 @@ sealed class CountryData(
         "+994",
         "994",
         "AZ",
-        "AZE"
+        "AZE",
+        "AZN",
+        "Azerbaijani manat",
+        "₼",
+        "Baku",
+        "Europe",
+        "+994-XX-XXX-XX-XX"
     )
 
     object Bahamas : CountryData(
@@ -114,7 +187,13 @@ sealed class CountryData(
         "+1 242",
         "1242",
         "BS",
-        "BHS"
+        "BHS",
+        "BSD",
+        "Bahamian dollar",
+        "$",
+        "Nassau",
+        "North America",
+        "+1(242)XXX-XXXX"
     )
 
     object Bahrain : CountryData(
@@ -123,7 +202,13 @@ sealed class CountryData(
         "+973",
         "973",
         "BH",
-        "BHR"
+        "BHR",
+        "BHD",
+        "Bahraini dinar",
+        ".د.ب",
+        "Manama",
+        "Asia",
+        "+973-XXXX-XXXX"
     )
 
     object Bangladesh : CountryData(
@@ -132,7 +217,13 @@ sealed class CountryData(
         "+880",
         "880",
         "BD",
-        "BGD"
+        "BGD",
+        "BDT",
+        "Bangladeshi taka",
+        "৳",
+        "Dhaka",
+        "Asia",
+        "+880-XX-XXX-XXX"
     )
 
     object Barbados : CountryData(
@@ -141,7 +232,13 @@ sealed class CountryData(
         "+1 246",
         "1246",
         "BB",
-        "BRB"
+        "BRB",
+        "BBD",
+        "Barbadian dollar",
+        "$",
+        "Bridgetown",
+        "North America",
+        "+1(246)XXX-XXXX"
     )
 
     object Belarus : CountryData(
@@ -150,7 +247,13 @@ sealed class CountryData(
         "+375",
         "375",
         "BY",
-        "BLR"
+        "BLR",
+        "BYN",
+        "Belarusian ruble",
+        "Br",
+        "Minsk",
+        "Europe",
+        "+375(XX)XXX-XX-XX"
     )
 
     object Belgium : CountryData(
@@ -159,7 +262,13 @@ sealed class CountryData(
         "+32",
         "32",
         "BE",
-        "BEL"
+        "BEL",
+        "EUR",
+        "euro",
+        "€",
+        "Brussels",
+        "Europe",
+        "+32(XXX)XXX-XXX"
     )
 
     object Belize : CountryData(
@@ -168,7 +277,13 @@ sealed class CountryData(
         "+501",
         "501",
         "BZ",
-        "BLZ"
+        "BLZ",
+        "BZD",
+        "Belize dollar",
+        "$",
+        "Belmopan",
+        "North America",
+        "+501-XXX-XXXX"
     )
 
     object Benin : CountryData(
@@ -177,7 +292,13 @@ sealed class CountryData(
         "+229",
         "229",
         "BJ",
-        "BEN"
+        "BEN",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Porto-Novo",
+        "Africa",
+        "+229-XX-XX-XXXX"
     )
 
     object Bhutan : CountryData(
@@ -186,7 +307,13 @@ sealed class CountryData(
         "+975",
         "975",
         "BT",
-        "BTN"
+        "BTN",
+        "BTN",
+        "Bhutanese ngultrum",
+        "Nu.",
+        "Thimphu",
+        "Asia",
+        "+975-X-XXX-XXX"
     )
 
     object Bolivia : CountryData(
@@ -195,7 +322,13 @@ sealed class CountryData(
         "+591",
         "591",
         "BO",
-        "BOL"
+        "BOL",
+        "BOB",
+        "Bolivian boliviano",
+        "Bs.",
+        "Sucre",
+        "South America",
+        "+591-X-XXX-XXXX"
     )
 
     object BosniaAndHerzegovina : CountryData(
@@ -204,7 +337,13 @@ sealed class CountryData(
         "+387",
         "387",
         "BA",
-        "BIH"
+        "BIH",
+        "BAM",
+        "Bosnia and Herzegovina convertible mark",
+        "KM",
+        "Sarajevo",
+        "Europe",
+        "+387-XX-XXXX"
     )
 
     object Botswana : CountryData(
@@ -213,7 +352,13 @@ sealed class CountryData(
         "+267",
         "267",
         "BW",
-        "BWA"
+        "BWA",
+        "BWP",
+        "Botswana pula",
+        "P",
+        "Gaborone",
+        "Africa",
+        "+267-XX-XXX-XXX"
     )
 
     object Brazil : CountryData(
@@ -222,7 +367,13 @@ sealed class CountryData(
         "+55",
         "55",
         "BR",
-        "BRA"
+        "BRA",
+        "BRL",
+        "Brazilian real",
+        "R$",
+        "Brasília",
+        "South America",
+        "+55(XX)9XXXX-XXXX"
     )
 
     object Brunei : CountryData(
@@ -231,7 +382,13 @@ sealed class CountryData(
         "+673",
         "673",
         "BN",
-        "BRN"
+        "BRN",
+        "BND",
+        "Brunei dollar",
+        "$",
+        "Bandar Seri Begawan",
+        "Asia",
+        "+673-XXX-XXXX"
     )
 
     object Bulgaria : CountryData(
@@ -240,7 +397,13 @@ sealed class CountryData(
         "+359",
         "359",
         "BG",
-        "BGR"
+        "BGR",
+        "BGN",
+        "Bulgarian lev",
+        "лв",
+        "Sofia",
+        "Europe",
+        "+359(XXX)XXX-XXX"
     )
 
     object BurkinaFaso : CountryData(
@@ -249,7 +412,13 @@ sealed class CountryData(
         "+226",
         "226",
         "BF",
-        "BFA"
+        "BFA",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Ouagadougou",
+        "Africa",
+        "+226-XX-XX-XXXX"
     )
 
     object Burundi : CountryData(
@@ -258,7 +427,13 @@ sealed class CountryData(
         "+257",
         "257",
         "BI",
-        "BDI"
+        "BDI",
+        "BIF",
+        "Burundian franc",
+        "Fr",
+        "Gitega",
+        "Africa",
+        "+257-XX-XX-XXXX"
     )
 
     object Cambodia : CountryData(
@@ -267,7 +442,13 @@ sealed class CountryData(
         "+855",
         "855",
         "KH",
-        "KHM"
+        "KHM",
+        "KHR",
+        "Cambodian riel",
+        "៛",
+        "Phnom Penh",
+        "Asia",
+        "+855-XX-XXX-XXX"
     )
 
     object Cameroon : CountryData(
@@ -276,7 +457,13 @@ sealed class CountryData(
         "+237",
         "237",
         "CM",
-        "CMR"
+        "CMR",
+        "XAF",
+        "Central African CFA franc",
+        "Fr",
+        "Yaoundé",
+        "Africa",
+        "+237-XXXX-XXXX"
     )
 
     object Canada : CountryData(
@@ -285,7 +472,13 @@ sealed class CountryData(
         "+1",
         "1",
         "CA",
-        "CAN"
+        "CAN",
+        "CAD",
+        "Canadian dollar",
+        "$",
+        "Ottawa",
+        "North America",
+        "+1(XXX)XXX-XXXX"
     )
 
     object CapeVerde : CountryData(
@@ -294,7 +487,13 @@ sealed class CountryData(
         "+238",
         "238",
         "CV",
-        "CPV"
+        "CPV",
+        "CVE",
+        "Cape Verdean escudo",
+        "Esc",
+        "Praia",
+        "Africa",
+        "+238(XXX)XX-XX"
     )
 
     object CentralAfricanRepublic : CountryData(
@@ -303,7 +502,13 @@ sealed class CountryData(
         "+236",
         "236",
         "CF",
-        "CAF"
+        "CAF",
+        "XAF",
+        "Central African CFA franc",
+        "Fr",
+        "Bangui",
+        "Africa",
+        "+236-XX-XX-XXXX"
     )
 
     object Chad : CountryData(
@@ -312,7 +517,13 @@ sealed class CountryData(
         "+235",
         "235",
         "TD",
-        "TCD"
+        "TCD",
+        "XAF",
+        "Central African CFA franc",
+        "Fr",
+        "N'Djamena",
+        "Africa",
+        "+235-XX-XX-XX-XX"
     )
 
     object Chile : CountryData(
@@ -321,7 +532,13 @@ sealed class CountryData(
         "+56",
         "56",
         "CL",
-        "CHL"
+        "CHL",
+        "CLP",
+        "Chilean peso",
+        "$",
+        "Santiago",
+        "South America",
+        "+56-X-XXXX-XXXX"
     )
 
     object China : CountryData(
@@ -330,7 +547,13 @@ sealed class CountryData(
         "+86",
         "86",
         "CN",
-        "CHN"
+        "CHN",
+        "CNY",
+        "Chinese yuan",
+        "¥",
+        "Beijing",
+        "Asia",
+        "+86-XX-XXXXX-XXXXX"
     )
 
     object Colombia : CountryData(
@@ -339,7 +562,13 @@ sealed class CountryData(
         "+57",
         "57",
         "CO",
-        "COL"
+        "COL",
+        "COP",
+        "Colombian peso",
+        "$",
+        "Bogotá",
+        "South America",
+        "+57(XXX)XXX-XXXX"
     )
 
     object Comoros : CountryData(
@@ -348,7 +577,13 @@ sealed class CountryData(
         "+269",
         "269",
         "KM",
-        "COM"
+        "COM",
+        "KMF",
+        "Comorian franc",
+        "Fr",
+        "Moroni",
+        "Africa",
+        "+269-XX-XXXXX"
     )
 
     object Congo : CountryData(
@@ -357,7 +592,13 @@ sealed class CountryData(
         "+242",
         "242",
         "CG",
-        "COG"
+        "COG",
+        "XAF",
+        "Central African CFA franc",
+        "Fr",
+        "Brazzaville",
+        "Africa",
+        "+242-XX-XXX-XXXX"
     )
 
     object CostaRica : CountryData(
@@ -366,7 +607,13 @@ sealed class CountryData(
         "+506",
         "506",
         "CR",
-        "CRI"
+        "CRI",
+        "CRC",
+        "Costa Rican colón",
+        "₡",
+        "San José",
+        "North America",
+        "+506-XXXX-XXXX"
     )
 
     object Croatia : CountryData(
@@ -375,7 +622,13 @@ sealed class CountryData(
         "+385",
         "385",
         "HR",
-        "HRV"
+        "HRV",
+        "EUR",
+        "euro",
+        "€",
+        "Zagreb",
+        "Europe",
+        "+385-XX-XXX-XXX"
     )
 
     object Cuba : CountryData(
@@ -384,7 +637,13 @@ sealed class CountryData(
         "+53",
         "53",
         "CU",
-        "CUB"
+        "CUB",
+        "CUC",
+        "Cuban convertible peso",
+        "$",
+        "Havana",
+        "North America",
+        "+53-X-XXX-XXXX"
     )
 
     object Cyprus : CountryData(
@@ -393,7 +652,13 @@ sealed class CountryData(
         "+357",
         "357",
         "CY",
-        "CYP"
+        "CYP",
+        "EUR",
+        "euro",
+        "€",
+        "Nicosia",
+        "Europe",
+        "+357-XX-XXX-XXX"
     )
 
     object CzechRepublic : CountryData(
@@ -402,7 +667,13 @@ sealed class CountryData(
         "+420",
         "420",
         "CZ",
-        "CZE"
+        "CZE",
+        "CZK",
+        "Czech koruna",
+        "Kč",
+        "Prague",
+        "Europe",
+        "+420(XXX)XXX-XXX"
     )
 
     object DemocraticRepublicOfCongo : CountryData(
@@ -411,7 +682,13 @@ sealed class CountryData(
         "+243",
         "243",
         "CD",
-        "COD"
+        "COD",
+        "CDF",
+        "Congolese franc",
+        "FC",
+        "Kinshasa",
+        "Africa",
+        "+243(XXX)XXX-XXX"
     )
 
     object Denmark : CountryData(
@@ -420,7 +697,13 @@ sealed class CountryData(
         "+45",
         "45",
         "DK",
-        "DNK"
+        "DNK",
+        "DKK",
+        "Danish krone",
+        "kr",
+        "Copenhagen",
+        "Europe",
+        "+45-XX-XX-XX-XX"
     )
 
     object Djibouti : CountryData(
@@ -429,7 +712,13 @@ sealed class CountryData(
         "+253",
         "253",
         "DJ",
-        "DJI"
+        "DJI",
+        "DJF",
+        "Djiboutian franc",
+        "Fr",
+        "Djibouti",
+        "Africa",
+        "+253-XX-XX-XX-XX"
     )
 
     object Dominica : CountryData(
@@ -438,7 +727,13 @@ sealed class CountryData(
         "+1 767",
         "1767",
         "DM",
-        "DMA"
+        "DMA",
+        "XCD",
+        "Eastern Caribbean dollar",
+        "$",
+        "Roseau",
+        "North America",
+        "+1(767)XXX-XXXX"
     )
 
     object DominicanRepublic : CountryData(
@@ -447,7 +742,13 @@ sealed class CountryData(
         "+1 809",
         "1809",
         "DO",
-        "DOM"
+        "DOM",
+        "DOP",
+        "Dominican peso",
+        "$",
+        "Santo Domingo",
+        "North America",
+        "+1(849)XXX-XXXX"
     )
 
     object Ecuador : CountryData(
@@ -456,7 +757,13 @@ sealed class CountryData(
         "+593",
         "593",
         "EC",
-        "ECU"
+        "ECU",
+        "USD",
+        "United States dollar",
+        "$",
+        "Quito",
+        "South America",
+        "+593-X-XXX-XXXX"
     )
 
     object Egypt : CountryData(
@@ -465,7 +772,13 @@ sealed class CountryData(
         "+20",
         "20",
         "EG",
-        "EGY"
+        "EGY",
+        "EGP",
+        "Egyptian pound",
+        "£",
+        "Cairo",
+        "Africa",
+        "+20(XXX)XXX-XXXX"
     )
 
     object ElSalvador : CountryData(
@@ -474,7 +787,13 @@ sealed class CountryData(
         "+503",
         "503",
         "SV",
-        "SLV"
+        "SLV",
+        "USD",
+        "United States dollar",
+        "$",
+        "San Salvador",
+        "North America",
+        "+503-XX-XX-XXXX"
     )
 
     object EquatorialGuinea : CountryData(
@@ -483,7 +802,13 @@ sealed class CountryData(
         "+240",
         "240",
         "GQ",
-        "GNQ"
+        "GNQ",
+        "XAF",
+        "Central African CFA franc",
+        "Fr",
+        "Malabo",
+        "Africa",
+        "+240-XX-XXX-XXXX"
     )
 
     object Eritrea : CountryData(
@@ -492,7 +817,13 @@ sealed class CountryData(
         "+291",
         "291",
         "ER",
-        "ERI"
+        "ERI",
+        "ERN",
+        "Eritrean nakfa",
+        "Nfk",
+        "Asmara",
+        "Africa",
+        "+291-X-XXX-XXX"
     )
 
     object Estonia : CountryData(
@@ -501,7 +832,13 @@ sealed class CountryData(
         "+372",
         "372",
         "EE",
-        "EST"
+        "EST",
+        "EUR",
+        "euro",
+        "€",
+        "Tallinn",
+        "Europe",
+        "+372-XXX-XXXX"
     )
 
     object Eswatini : CountryData(
@@ -510,7 +847,13 @@ sealed class CountryData(
         "+268",
         "268",
         "SZ",
-        "SWZ"
+        "SWZ",
+        "SZL",
+        "Swazi lilangeni",
+        "L",
+        "Mbabane",
+        "Africa",
+        "+268-XX-XX-XXXX"
     )
 
     object Ethiopia : CountryData(
@@ -519,7 +862,13 @@ sealed class CountryData(
         "+251",
         "251",
         "ET",
-        "ETH"
+        "ETH",
+        "ETB",
+        "Ethiopian birr",
+        "Br",
+        "Addis Ababa",
+        "Africa",
+        "+251-XX-XXX-XXXX"
     )
 
     object Fiji : CountryData(
@@ -528,7 +877,13 @@ sealed class CountryData(
         "+679",
         "679",
         "FJ",
-        "FJI"
+        "FJI",
+        "FJD",
+        "Fijian dollar",
+        "$",
+        "Suva",
+        "Oceania",
+        "+679-XX-XXXXX"
     )
 
     object Finland : CountryData(
@@ -537,7 +892,13 @@ sealed class CountryData(
         "+358",
         "358",
         "FI",
-        "FIN"
+        "FIN",
+        "EUR",
+        "euro",
+        "€",
+        "Helsinki",
+        "Europe",
+        "+358(XXX)XXX-XX-XX"
     )
 
     object France : CountryData(
@@ -546,7 +907,13 @@ sealed class CountryData(
         "+33",
         "33",
         "FR",
-        "FRA"
+        "FRA",
+        "EUR",
+        "euro",
+        "€",
+        "Paris",
+        "Europe",
+        "+590(XXX)XXX-XXX"
     )
 
     object Gabon : CountryData(
@@ -555,7 +922,13 @@ sealed class CountryData(
         "+241",
         "241",
         "GA",
-        "GAB"
+        "GAB",
+        "XAF",
+        "Central African CFA franc",
+        "Fr",
+        "Libreville",
+        "Africa",
+        "+241-X-XX-XX-XX"
     )
 
     object Gambia : CountryData(
@@ -564,7 +937,13 @@ sealed class CountryData(
         "+220",
         "220",
         "GM",
-        "GMB"
+        "GMB",
+        "GMD",
+        "dalasi",
+        "D",
+        "Banjul",
+        "Africa",
+        "+220(XXX)XX-XX"
     )
 
     object Georgia : CountryData(
@@ -573,7 +952,13 @@ sealed class CountryData(
         "+995",
         "995",
         "GE",
-        "GEO"
+        "GEO",
+        "GEL",
+        "lari",
+        "₾",
+        "Tbilisi",
+        "Asia",
+        "+995(XXX)XXX-XXX"
     )
 
     object Germany : CountryData(
@@ -582,7 +967,13 @@ sealed class CountryData(
         "+49",
         "49",
         "DE",
-        "DEU"
+        "DEU",
+        "EUR",
+        "euro",
+        "€",
+        "Berlin",
+        "Europe",
+        "+49-XXX-XXX"
     )
 
     object Ghana : CountryData(
@@ -591,7 +982,13 @@ sealed class CountryData(
         "+233",
         "233",
         "GH",
-        "GHA"
+        "GHA",
+        "GHS",
+        "Ghanaian cedi",
+        "₵",
+        "Accra",
+        "Africa",
+        "+233(XXX)XXX-XXX"
     )
 
     object Greece : CountryData(
@@ -600,7 +997,13 @@ sealed class CountryData(
         "+30",
         "30",
         "GR",
-        "GRC"
+        "GRC",
+        "EUR",
+        "euro",
+        "€",
+        "Athens",
+        "Europe",
+        "+30(XXX)XXX-XXXX"
     )
 
     object Grenada : CountryData(
@@ -609,7 +1012,13 @@ sealed class CountryData(
         "+1 473",
         "1473",
         "GD",
-        "GRD"
+        "GRD",
+        "XCD",
+        "Eastern Caribbean dollar",
+        "$",
+        "St. George's",
+        "North America",
+        "+1(473)XXX-XXXX"
     )
 
     object Guatemala : CountryData(
@@ -618,7 +1027,13 @@ sealed class CountryData(
         "+502",
         "502",
         "GT",
-        "GTM"
+        "GTM",
+        "GTQ",
+        "Guatemalan quetzal",
+        "Q",
+        "Guatemala City",
+        "North America",
+        "+502-X-XXX-XXXX"
     )
 
     object Guinea : CountryData(
@@ -627,7 +1042,13 @@ sealed class CountryData(
         "+224",
         "224",
         "GN",
-        "GIN"
+        "GIN",
+        "GNF",
+        "Guinean franc",
+        "Fr",
+        "Conakry",
+        "Africa",
+        "+224-XX-XXX-XXX"
     )
 
     object GuineaBissau : CountryData(
@@ -636,7 +1057,13 @@ sealed class CountryData(
         "+245",
         "245",
         "GW",
-        "GNB"
+        "GNB",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Bissau",
+        "Africa",
+        "+245-X-XXXXXX"
     )
 
     object Guyana : CountryData(
@@ -645,7 +1072,13 @@ sealed class CountryData(
         "+592",
         "592",
         "GY",
-        "GUY"
+        "GUY",
+        "GYD",
+        "Guyanese dollar",
+        "$",
+        "Georgetown",
+        "South America",
+        "+592-XXX-XXXX"
     )
 
     object Haiti : CountryData(
@@ -654,7 +1087,13 @@ sealed class CountryData(
         "+509",
         "509",
         "HT",
-        "HTI"
+        "HTI",
+        "HTG",
+        "Haitian gourde",
+        "G",
+        "Port-au-Prince",
+        "North America",
+        "+509-XX-XX-XXXX"
     )
 
     object Honduras : CountryData(
@@ -663,7 +1102,13 @@ sealed class CountryData(
         "+504",
         "504",
         "HN",
-        "HND"
+        "HND",
+        "HNL",
+        "Honduran lempira",
+        "L",
+        "Tegucigalpa",
+        "North America",
+        "+504-XXXX-XXXX"
     )
 
     object Hungary : CountryData(
@@ -672,7 +1117,13 @@ sealed class CountryData(
         "+36",
         "36",
         "HU",
-        "HUN"
+        "HUN",
+        "HUF",
+        "Hungarian forint",
+        "Ft",
+        "Budapest",
+        "Europe",
+        "+36(XXX)XXX-XXX"
     )
 
     object Iceland : CountryData(
@@ -681,7 +1132,13 @@ sealed class CountryData(
         "+354",
         "354",
         "IS",
-        "ISL"
+        "ISL",
+        "ISK",
+        "Icelandic króna",
+        "kr",
+        "Reykjavik",
+        "Europe",
+        "+354-XXX-XXXX"
     )
 
     object India : CountryData(
@@ -690,7 +1147,13 @@ sealed class CountryData(
         "+91",
         "91",
         "IN",
-        "IND"
+        "IND",
+        "INR",
+        "Indian rupee",
+        "₹",
+        "New Delhi",
+        "Asia",
+        "+91(XXXX)XXX-XXX"
     )
 
     object Indonesia : CountryData(
@@ -699,7 +1162,13 @@ sealed class CountryData(
         "+62",
         "62",
         "ID",
-        "IDN"
+        "IDN",
+        "IDR",
+        "Indonesian rupiah",
+        "Rp",
+        "Jakarta",
+        "Asia",
+        "+62(8XX)XXX-XX-XXX"
     )
 
     object Iran : CountryData(
@@ -708,7 +1177,13 @@ sealed class CountryData(
         "+98",
         "98",
         "IR",
-        "IRN"
+        "IRN",
+        "IRR",
+        "Iranian rial",
+        "﷼",
+        "Tehran",
+        "Asia",
+        "+98(XXX)XXX-XXXX"
     )
 
     object Iraq : CountryData(
@@ -717,7 +1192,13 @@ sealed class CountryData(
         "+964",
         "964",
         "IQ",
-        "IRQ"
+        "IRQ",
+        "IQD",
+        "Iraqi dinar",
+        "ع.د",
+        "Baghdad",
+        "Asia",
+        "+964(XXX)XXX-XXXX"
     )
 
     object Ireland : CountryData(
@@ -726,7 +1207,13 @@ sealed class CountryData(
         "+353",
         "353",
         "IE",
-        "IRL"
+        "IRL",
+        "EUR",
+        "euro",
+        "€",
+        "Dublin",
+        "Europe",
+        "+353(XXX)XXX-XXX"
     )
 
     object Israel : CountryData(
@@ -735,7 +1222,13 @@ sealed class CountryData(
         "+972",
         "972",
         "IL",
-        "ISR"
+        "ISR",
+        "ILS",
+        "Israeli new shekel",
+        "₪",
+        "Jerusalem",
+        "Asia",
+        "+972-X-XXX-XXXX"
     )
 
     object Italy : CountryData(
@@ -744,7 +1237,13 @@ sealed class CountryData(
         "+39",
         "39",
         "IT",
-        "ITA"
+        "ITA",
+        "EUR",
+        "euro",
+        "€",
+        "Rome",
+        "Europe",
+        "+39(XXX)XXXX-XXX"
     )
 
     object IvoryCoast : CountryData(
@@ -753,7 +1252,13 @@ sealed class CountryData(
         "+225",
         "225",
         "CI",
-        "CIV"
+        "CIV",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Yamoussoukro",
+        "Africa",
+        "+225-XX-XXX-XXX"
     )
 
     object Jamaica : CountryData(
@@ -762,7 +1267,13 @@ sealed class CountryData(
         "+1 876",
         "1876",
         "JM",
-        "JAM"
+        "JAM",
+        "JMD",
+        "Jamaican dollar",
+        "$",
+        "Kingston",
+        "North America",
+        "+1(876)XXX-XXXX"
     )
 
     object Japan : CountryData(
@@ -771,7 +1282,13 @@ sealed class CountryData(
         "+81",
         "81",
         "JP",
-        "JPN"
+        "JPN",
+        "JPY",
+        "Japanese yen",
+        "¥",
+        "Tokyo",
+        "Asia",
+        "+81(XXX)XXX-XXX"
     )
 
     object Jordan : CountryData(
@@ -780,7 +1297,13 @@ sealed class CountryData(
         "+962",
         "962",
         "JO",
-        "JOR"
+        "JOR",
+        "JOD",
+        "Jordanian dinar",
+        "د.ا",
+        "Amman",
+        "Asia",
+        "+962-X-XXXX-XXXX"
     )
 
     object Kazakhstan : CountryData(
@@ -789,7 +1312,13 @@ sealed class CountryData(
         "+7",
         "7",
         "KZ",
-        "KAZ"
+        "KAZ",
+        "KZT",
+        "Kazakhstani tenge",
+        "₸",
+        "Astana",
+        "Asia",
+        "+7(7XX)XXX-XX-XX"
     )
 
     object Kenya : CountryData(
@@ -798,7 +1327,13 @@ sealed class CountryData(
         "+254",
         "254",
         "KE",
-        "KEN"
+        "KEN",
+        "KES",
+        "Kenyan shilling",
+        "Sh",
+        "Nairobi",
+        "Africa",
+        "+254-XXX-XXXXXX"
     )
 
     object Kiribati : CountryData(
@@ -807,7 +1342,13 @@ sealed class CountryData(
         "+686",
         "686",
         "KI",
-        "KIR"
+        "KIR",
+        "AUD",
+        "Australian dollar",
+        "$",
+        "South Tarawa",
+        "Oceania",
+        "+686-XX-XXX"
     )
 
     object Kosovo : CountryData(
@@ -816,7 +1357,13 @@ sealed class CountryData(
         "+383",
         "383",
         "XK",
-        "XKX"
+        "XKX",
+        "EUR",
+        "euro",
+        "€",
+        "Pristina",
+        "Europe",
+        ""
     )
 
     object Kuwait : CountryData(
@@ -825,7 +1372,13 @@ sealed class CountryData(
         "+965",
         "965",
         "KW",
-        "KWT"
+        "KWT",
+        "KWD",
+        "Kuwaiti dinar",
+        "د.ك",
+        "Kuwait City",
+        "Asia",
+        "+965-XXXX-XXXX"
     )
 
     object Kyrgyzstan : CountryData(
@@ -834,7 +1387,13 @@ sealed class CountryData(
         "+996",
         "996",
         "KG",
-        "KGZ"
+        "KGZ",
+        "KGS",
+        "Kyrgyzstani som",
+        "с",
+        "Bishkek",
+        "Asia",
+        "+996(XXX)XXX-XXX"
     )
 
     object Laos : CountryData(
@@ -843,7 +1402,13 @@ sealed class CountryData(
         "+856",
         "856",
         "LA",
-        "LAO"
+        "LAO",
+        "LAK",
+        "Lao kip",
+        "₭",
+        "Vientiane",
+        "Asia",
+        "+856-XX-XXX-XXX"
     )
 
     object Latvia : CountryData(
@@ -852,7 +1417,13 @@ sealed class CountryData(
         "+371",
         "371",
         "LV",
-        "LVA"
+        "LVA",
+        "EUR",
+        "euro",
+        "€",
+        "Riga",
+        "Europe",
+        "+371-XX-XXX-XXX"
     )
 
     object Lebanon : CountryData(
@@ -861,7 +1432,13 @@ sealed class CountryData(
         "+961",
         "961",
         "LB",
-        "LBN"
+        "LBN",
+        "LBP",
+        "Lebanese pound",
+        "ل.ل",
+        "Beirut",
+        "Asia",
+        "+961-X-XXX-XXX"
     )
 
     object Lesotho : CountryData(
@@ -870,7 +1447,13 @@ sealed class CountryData(
         "+266",
         "266",
         "LS",
-        "LSO"
+        "LSO",
+        "LSL",
+        "Lesotho loti",
+        "L",
+        "Maseru",
+        "Africa",
+        "+266-X-XXX-XXXX"
     )
 
     object Liberia : CountryData(
@@ -879,7 +1462,13 @@ sealed class CountryData(
         "+231",
         "231",
         "LR",
-        "LBR"
+        "LBR",
+        "LRD",
+        "Liberian dollar",
+        "$",
+        "Monrovia",
+        "Africa",
+        "+231-XX-XXX-XXX"
     )
 
     object Libya : CountryData(
@@ -888,7 +1477,13 @@ sealed class CountryData(
         "+218",
         "218",
         "LY",
-        "LBY"
+        "LBY",
+        "LYD",
+        "Libyan dinar",
+        "ل.د",
+        "Tripoli",
+        "Africa",
+        "+218-21-XXX-XXXX"
     )
 
     object Liechtenstein : CountryData(
@@ -897,7 +1492,13 @@ sealed class CountryData(
         "+423",
         "423",
         "LI",
-        "LIE"
+        "LIE",
+        "CHF",
+        "Swiss franc",
+        "Fr",
+        "Vaduz",
+        "Europe",
+        "+423(XXX)XXX-XXXX"
     )
 
     object Lithuania : CountryData(
@@ -906,7 +1507,13 @@ sealed class CountryData(
         "+370",
         "370",
         "LT",
-        "LTU"
+        "LTU",
+        "EUR",
+        "euro",
+        "€",
+        "Vilnius",
+        "Europe",
+        "+370(XXX)XX-XXX"
     )
 
     object Luxembourg : CountryData(
@@ -915,7 +1522,13 @@ sealed class CountryData(
         "+352",
         "352",
         "LU",
-        "LUX"
+        "LUX",
+        "EUR",
+        "euro",
+        "€",
+        "Luxembourg",
+        "Europe",
+        "+352(XXX)XXX-XXX"
     )
 
     object Madagascar : CountryData(
@@ -924,7 +1537,13 @@ sealed class CountryData(
         "+261",
         "261",
         "MG",
-        "MDG"
+        "MDG",
+        "MGA",
+        "Malagasy ariary",
+        "Ar",
+        "Antananarivo",
+        "Africa",
+        "+261-XX-XX-XXXXX"
     )
 
     object Malawi : CountryData(
@@ -933,7 +1552,13 @@ sealed class CountryData(
         "+265",
         "265",
         "MW",
-        "MWI"
+        "MWI",
+        "MWK",
+        "Malawian kwacha",
+        "MK",
+        "Lilongwe",
+        "Africa",
+        "+265-X-XXXX-XXXX"
     )
 
     object Malaysia : CountryData(
@@ -942,7 +1567,13 @@ sealed class CountryData(
         "+60",
         "60",
         "MY",
-        "MYS"
+        "MYS",
+        "MYR",
+        "Malaysian ringgit",
+        "RM",
+        "Kuala Lumpur",
+        "Asia",
+        "+60-X-XXX-XXX"
     )
 
     object Maldives : CountryData(
@@ -951,7 +1582,13 @@ sealed class CountryData(
         "+960",
         "960",
         "MV",
-        "MDV"
+        "MDV",
+        "MVR",
+        "Maldivian rufiyaa",
+        ".ރ",
+        "Malé",
+        "Asia",
+        "+960-XXX-XXXX"
     )
 
     object Mali : CountryData(
@@ -960,7 +1597,13 @@ sealed class CountryData(
         "+223",
         "223",
         "ML",
-        "MLI"
+        "MLI",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Bamako",
+        "Africa",
+        "+223-XX-XX-XXXX"
     )
 
     object Malta : CountryData(
@@ -969,7 +1612,13 @@ sealed class CountryData(
         "+356",
         "356",
         "MT",
-        "MLT"
+        "MLT",
+        "EUR",
+        "euro",
+        "€",
+        "Valletta",
+        "Europe",
+        "+356-XXXX-XXXX"
     )
 
     object MarshallIslands : CountryData(
@@ -978,7 +1627,13 @@ sealed class CountryData(
         "+692",
         "692",
         "MH",
-        "MHL"
+        "MHL",
+        "USD",
+        "United States dollar",
+        "$",
+        "Majuro",
+        "Oceania",
+        "+692-XXX-XXXX"
     )
 
     object Mauritania : CountryData(
@@ -987,16 +1642,28 @@ sealed class CountryData(
         "+222",
         "222",
         "MR",
-        "MRT"
+        "MRT",
+        "MRU",
+        "Mauritanian ouguiya",
+        "UM",
+        "Nouakchott",
+        "Africa",
+        "+222-XX-XX-XXXX"
     )
-        
+
     object Mauritius : CountryData(
         R.string.mauritius,
         R.drawable.mauritius_flag,
         "+230",
         "230",
         "MU",
-        "MUS"
+        "MUS",
+        "MUR",
+        "Mauritian rupee",
+        "₨",
+        "Port Louis",
+        "Africa",
+        "+230-XXX-XXXX"
     )
 
     object Mexico : CountryData(
@@ -1005,7 +1672,13 @@ sealed class CountryData(
         "+52",
         "52",
         "MX",
-        "MEX"
+        "MEX",
+        "MXN",
+        "Mexican peso",
+        "$",
+        "Mexico City",
+        "North America",
+        "+52-XX-XX-XXXX"
     )
 
     object Micronesia : CountryData(
@@ -1014,7 +1687,13 @@ sealed class CountryData(
         "+691",
         "691",
         "FM",
-        "FSM"
+        "FSM",
+        "USD",
+        "United States dollar",
+        "$",
+        "Palikir",
+        "Oceania",
+        "+691-XXX-XXXX"
     )
 
     object Moldova : CountryData(
@@ -1023,7 +1702,13 @@ sealed class CountryData(
         "+373",
         "373",
         "MD",
-        "MDA"
+        "MDA",
+        "MDL",
+        "Moldovan leu",
+        "L",
+        "Chișinău",
+        "Europe",
+        "+373-XXXX-XXXX"
     )
 
     object Monaco : CountryData(
@@ -1032,7 +1717,13 @@ sealed class CountryData(
         "+377",
         "377",
         "MC",
-        "MCO"
+        "MCO",
+        "EUR",
+        "euro",
+        "€",
+        "Monaco",
+        "Europe",
+        "+377-XX-XXX-XXX"
     )
 
     object Mongolia : CountryData(
@@ -1041,7 +1732,13 @@ sealed class CountryData(
         "+976",
         "976",
         "MN",
-        "MNG"
+        "MNG",
+        "MNT",
+        "Mongolian tögrög",
+        "₮",
+        "Ulan Bator",
+        "Asia",
+        "+976-XX-XX-XXXX"
     )
 
     object Montenegro : CountryData(
@@ -1050,7 +1747,13 @@ sealed class CountryData(
         "+382",
         "382",
         "ME",
-        "MNE"
+        "MNE",
+        "EUR",
+        "euro",
+        "€",
+        "Podgorica",
+        "Europe",
+        "+382-XX-XXX-XXX"
     )
 
     object Morocco : CountryData(
@@ -1059,7 +1762,13 @@ sealed class CountryData(
         "+212",
         "212",
         "MA",
-        "MAR"
+        "MAR",
+        "MAD",
+        "Moroccan dirham",
+        "د.م.",
+        "Rabat",
+        "Africa",
+        "+212-XX-XXXX-XXX"
     )
 
     object Mozambique : CountryData(
@@ -1068,7 +1777,13 @@ sealed class CountryData(
         "+258",
         "258",
         "MZ",
-        "MOZ"
+        "MOZ",
+        "MZN",
+        "Mozambican metical",
+        "MT",
+        "Maputo",
+        "Africa",
+        "+258-XX-XXX-XXX"
     )
 
     object Myanmar : CountryData(
@@ -1077,7 +1792,13 @@ sealed class CountryData(
         "+95",
         "95",
         "MM",
-        "MMR"
+        "MMR",
+        "MMK",
+        "Burmese kyat",
+        "Ks",
+        "Naypyidaw",
+        "Asia",
+        "+95-XXX-XXX"
     )
 
     object Namibia : CountryData(
@@ -1086,7 +1807,13 @@ sealed class CountryData(
         "+264",
         "264",
         "NA",
-        "NAM"
+        "NAM",
+        "NAD",
+        "Namibian dollar",
+        "$",
+        "Windhoek",
+        "Africa",
+        "+264-XX-XXX-XXXX"
     )
 
     object Nauru : CountryData(
@@ -1095,7 +1822,13 @@ sealed class CountryData(
         "+674",
         "674",
         "NR",
-        "NRU"
+        "NRU",
+        "AUD",
+        "Australian dollar",
+        "$",
+        "Yaren",
+        "Oceania",
+        "+674-XXX-XXXX"
     )
 
     object Nepal : CountryData(
@@ -1104,7 +1837,13 @@ sealed class CountryData(
         "+977",
         "977",
         "NP",
-        "NPL"
+        "NPL",
+        "NPR",
+        "Nepalese rupee",
+        "₨",
+        "Kathmandu",
+        "Asia",
+        "+977-XX-XXX-XXX"
     )
 
     object Netherlands : CountryData(
@@ -1113,7 +1852,13 @@ sealed class CountryData(
         "+31",
         "31",
         "NL",
-        "NLD"
+        "NLD",
+        "EUR",
+        "euro",
+        "€",
+        "Amsterdam",
+        "Europe",
+        "+31-XX-XXX-XXXX"
     )
 
     object NewZealand : CountryData(
@@ -1122,7 +1867,13 @@ sealed class CountryData(
         "+64",
         "64",
         "NZ",
-        "NZL"
+        "NZL",
+        "NZD",
+        "New Zealand dollar",
+        "$",
+        "Wellington",
+        "Oceania",
+        "+64(XXX)XXX-XXXX"
     )
 
     object Nicaragua : CountryData(
@@ -1131,7 +1882,13 @@ sealed class CountryData(
         "+505",
         "505",
         "NI",
-        "NIC"
+        "NIC",
+        "NIO",
+        "Nicaraguan córdoba",
+        "C$",
+        "Managua",
+        "North America",
+        "+505-XXXX-XXXX"
     )
 
     object Niger : CountryData(
@@ -1140,7 +1897,13 @@ sealed class CountryData(
         "+227",
         "227",
         "NE",
-        "NER"
+        "NER",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Niamey",
+        "Africa",
+        "+227-XX-XX-XXXX"
     )
 
     object Nigeria : CountryData(
@@ -1149,7 +1912,13 @@ sealed class CountryData(
         "+234",
         "234",
         "NG",
-        "NGA"
+        "NGA",
+        "NGN",
+        "Nigerian naira",
+        "₦",
+        "Abuja",
+        "Africa",
+        "+234(XXX)XXX-XXXX"
     )
 
     object NorthKorea : CountryData(
@@ -1158,7 +1927,13 @@ sealed class CountryData(
         "+850",
         "850",
         "KP",
-        "PRK"
+        "PRK",
+        "KPW",
+        "North Korean won",
+        "₩",
+        "Pyongyang",
+        "Asia",
+        "+850-XXXX-XXXXXXXXXXXXX"
     )
 
     object NorthMacedonia : CountryData(
@@ -1167,7 +1942,13 @@ sealed class CountryData(
         "+389",
         "389",
         "MK",
-        "MKD"
+        "MKD",
+        "MKD",
+        "denar",
+        "den",
+        "Skopje",
+        "Europe",
+        "+389-XX-XXX-XXX"
     )
 
     object Norway : CountryData(
@@ -1176,7 +1957,13 @@ sealed class CountryData(
         "+47",
         "47",
         "NO",
-        "NOR"
+        "NOR",
+        "NOK",
+        "Norwegian krone",
+        "kr",
+        "Oslo",
+        "Europe",
+        "+47(XXX)XX-XXX"
     )
 
     object Oman : CountryData(
@@ -1185,7 +1972,13 @@ sealed class CountryData(
         "+968",
         "968",
         "OM",
-        "OMN"
+        "OMN",
+        "OMR",
+        "Omani rial",
+        "ر.ع.",
+        "Muscat",
+        "Asia",
+        "+968-XX-XXX-XXX"
     )
 
     object Pakistan : CountryData(
@@ -1194,7 +1987,13 @@ sealed class CountryData(
         "+92",
         "92",
         "PK",
-        "PAK"
+        "PAK",
+        "PKR",
+        "Pakistani rupee",
+        "₨",
+        "Islamabad",
+        "Asia",
+        "+92(XXX)XXX-XXXX"
     )
 
     object Palau : CountryData(
@@ -1203,7 +2002,13 @@ sealed class CountryData(
         "+680",
         "680",
         "PW",
-        "PLW"
+        "PLW",
+        "USD",
+        "United States dollar",
+        "$",
+        "Ngerulmud",
+        "Oceania",
+        "+680-XXX-XXXX"
     )
 
     object Panama : CountryData(
@@ -1212,7 +2017,13 @@ sealed class CountryData(
         "+507",
         "507",
         "PA",
-        "PAN"
+        "PAN",
+        "PAB",
+        "Panamanian balboa",
+        "B/.",
+        "Panama City",
+        "North America",
+        "+507-XXX-XXXX"
     )
 
     object PapuaNewGuinea : CountryData(
@@ -1221,7 +2032,13 @@ sealed class CountryData(
         "+675",
         "675",
         "PG",
-        "PNG"
+        "PNG",
+        "PGK",
+        "Papua New Guinean kina",
+        "K",
+        "Port Moresby",
+        "Oceania",
+        "+675(XXX)XX-XXX"
     )
 
     object Paraguay : CountryData(
@@ -1230,7 +2047,13 @@ sealed class CountryData(
         "+595",
         "595",
         "PY",
-        "PRY"
+        "PRY",
+        "PYG",
+        "Paraguayan guaraní",
+        "₲",
+        "Asunción",
+        "South America",
+        "+595(XXX)XXX-XXX"
     )
 
     object Peru : CountryData(
@@ -1239,7 +2062,13 @@ sealed class CountryData(
         "+51",
         "51",
         "PE",
-        "PER"
+        "PER",
+        "PEN",
+        "Peruvian sol",
+        "S/ ",
+        "Lima",
+        "South America",
+        "+51(XXX)XXX-XXX"
     )
 
     object Philippines : CountryData(
@@ -1248,7 +2077,13 @@ sealed class CountryData(
         "+63",
         "63",
         "PH",
-        "PHL"
+        "PHL",
+        "PHP",
+        "Philippine peso",
+        "₱",
+        "Manila",
+        "Asia",
+        "+63(XXX)XXX-XXXX"
     )
 
     object Poland : CountryData(
@@ -1257,7 +2092,13 @@ sealed class CountryData(
         "+48",
         "48",
         "PL",
-        "POL"
+        "POL",
+        "PLN",
+        "Polish złoty",
+        "zł",
+        "Warsaw",
+        "Europe",
+        "+48(XXX)XXX-XXX"
     )
 
     object Portugal : CountryData(
@@ -1266,7 +2107,13 @@ sealed class CountryData(
         "+351",
         "351",
         "PT",
-        "PRT"
+        "PRT",
+        "EUR",
+        "euro",
+        "€",
+        "Lisbon",
+        "Europe",
+        "+351-XX-XXX-XXXX"
     )
 
     object Qatar : CountryData(
@@ -1275,7 +2122,13 @@ sealed class CountryData(
         "+974",
         "974",
         "QA",
-        "QAT"
+        "QAT",
+        "QAR",
+        "Qatari riyal",
+        "ر.ق",
+        "Doha",
+        "Asia",
+        "+974-XXXX-XXXX"
     )
 
     object Romania : CountryData(
@@ -1284,7 +2137,13 @@ sealed class CountryData(
         "+40",
         "40",
         "RO",
-        "ROU"
+        "ROU",
+        "RON",
+        "Romanian leu",
+        "lei",
+        "Bucharest",
+        "Europe",
+        "+40-XX-XXX-XXXX"
     )
 
     object Russia : CountryData(
@@ -1293,7 +2152,13 @@ sealed class CountryData(
         "+7",
         "7",
         "RU",
-        "RUS"
+        "RUS",
+        "RUB",
+        "Russian ruble",
+        "₽",
+        "Moscow",
+        "Europe",
+        "+7(XXX)XXX-XX-XX"
     )
 
     object Rwanda : CountryData(
@@ -1302,7 +2167,13 @@ sealed class CountryData(
         "+250",
         "250",
         "RW",
-        "RWA"
+        "RWA",
+        "RWF",
+        "Rwandan franc",
+        "Fr",
+        "Kigali",
+        "Africa",
+        "+250(XXX)XXX-XXX"
     )
 
     object SaintKittsAndNevis : CountryData(
@@ -1311,7 +2182,13 @@ sealed class CountryData(
         "+1869",
         "1869",
         "KN",
-        "KNA"
+        "KNA",
+        "XCD",
+        "Eastern Caribbean dollar",
+        "$",
+        "Basseterre",
+        "North America",
+        "+1(869)XXX-XXXX"
     )
 
     object SaintLucia : CountryData(
@@ -1320,7 +2197,13 @@ sealed class CountryData(
         "+1758",
         "1758",
         "LC",
-        "LCA"
+        "LCA",
+        "XCD",
+        "Eastern Caribbean dollar",
+        "$",
+        "Castries",
+        "North America",
+        "+1(758)XXX-XXXX"
     )
 
     object SaintVincentAndTheGrenadines : CountryData(
@@ -1329,7 +2212,13 @@ sealed class CountryData(
         "+1784",
         "1784",
         "VC",
-        "VCT"
+        "VCT",
+        "XCD",
+        "Eastern Caribbean dollar",
+        "$",
+        "Kingstown",
+        "North America",
+        "+1(784)XXX-XXXX"
     )
 
     object Samoa : CountryData(
@@ -1338,7 +2227,13 @@ sealed class CountryData(
         "+685",
         "685",
         "WS",
-        "WSM"
+        "WSM",
+        "WST",
+        "Samoan tālā",
+        "T",
+        "Apia",
+        "Oceania",
+        "+685-XX-XXXX"
     )
 
     object SanMarino : CountryData(
@@ -1347,7 +2242,13 @@ sealed class CountryData(
         "+378",
         "378",
         "SM",
-        "SMR"
+        "SMR",
+        "EUR",
+        "euro",
+        "€",
+        "City of San Marino",
+        "Europe",
+        "+378-XXXX-XXXXXX"
     )
 
     object SaoTomeAndPrincipe : CountryData(
@@ -1356,7 +2257,13 @@ sealed class CountryData(
         "+239",
         "239",
         "ST",
-        "STP"
+        "STP",
+        "STN",
+        "São Tomé and Príncipe dobra",
+        "Db",
+        "São Tomé",
+        "Africa",
+        "+239-XX-XXXXX"
     )
 
     object SaudiArabia : CountryData(
@@ -1365,7 +2272,13 @@ sealed class CountryData(
         "+966",
         "966",
         "SA",
-        "SAU"
+        "SAU",
+        "SAR",
+        "Saudi riyal",
+        "ر.س",
+        "Riyadh",
+        "Asia",
+        "+966-X-XXX-XXXX"
     )
 
     object Senegal : CountryData(
@@ -1374,7 +2287,13 @@ sealed class CountryData(
         "+221",
         "221",
         "SN",
-        "SEN"
+        "SEN",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Dakar",
+        "Africa",
+        "+221-XX-XXX-XXXX"
     )
 
     object Serbia : CountryData(
@@ -1383,7 +2302,13 @@ sealed class CountryData(
         "+381",
         "381",
         "RS",
-        "SRB"
+        "SRB",
+        "RSD",
+        "Serbian dinar",
+        "дин.",
+        "Belgrade",
+        "Europe",
+        "+381-XX-XXX-XXXX"
     )
 
     object Seychelles : CountryData(
@@ -1392,7 +2317,13 @@ sealed class CountryData(
         "+248",
         "248",
         "SC",
-        "SYC"
+        "SYC",
+        "SCR",
+        "Seychellois rupee",
+        "₨",
+        "Victoria",
+        "Africa",
+        "+248-X-XXX-XXX"
     )
 
     object SierraLeone : CountryData(
@@ -1401,7 +2332,13 @@ sealed class CountryData(
         "+232",
         "232",
         "SL",
-        "SLE"
+        "SLE",
+        "SLE",
+        "Leone",
+        "Le",
+        "Freetown",
+        "Africa",
+        "+232-XX-XXXXXX"
     )
 
     object Singapore : CountryData(
@@ -1410,7 +2347,13 @@ sealed class CountryData(
         "+65",
         "65",
         "SG",
-        "SGP"
+        "SGP",
+        "SGD",
+        "Singapore dollar",
+        "$",
+        "Singapore",
+        "Asia",
+        "+65-XXXX-XXXX"
     )
 
     object Slovakia : CountryData(
@@ -1419,7 +2362,13 @@ sealed class CountryData(
         "+421",
         "421",
         "SK",
-        "SVK"
+        "SVK",
+        "EUR",
+        "euro",
+        "€",
+        "Bratislava",
+        "Europe",
+        "+421(XXX)XXX-XXX"
     )
 
     object Slovenia : CountryData(
@@ -1428,7 +2377,13 @@ sealed class CountryData(
         "+386",
         "386",
         "SI",
-        "SVN"
+        "SVN",
+        "EUR",
+        "euro",
+        "€",
+        "Ljubljana",
+        "Europe",
+        "+386-XX-XXX-XXX"
     )
 
     object SolomonIslands : CountryData(
@@ -1437,7 +2392,13 @@ sealed class CountryData(
         "+677",
         "677",
         "SB",
-        "SLB"
+        "SLB",
+        "SBD",
+        "Solomon Islands dollar",
+        "$",
+        "Honiara",
+        "Oceania",
+        "+677-XXXXX"
     )
 
     object Somalia : CountryData(
@@ -1446,7 +2407,13 @@ sealed class CountryData(
         "+252",
         "252",
         "SO",
-        "SOM"
+        "SOM",
+        "SOS",
+        "Somali shilling",
+        "Sh",
+        "Mogadishu",
+        "Africa",
+        "+252-X-XXX-XXX"
     )
 
     object SouthAfrica : CountryData(
@@ -1455,7 +2422,13 @@ sealed class CountryData(
         "+27",
         "27",
         "ZA",
-        "ZAF"
+        "ZAF",
+        "ZAR",
+        "South African rand",
+        "R",
+        "Pretoria",
+        "Africa",
+        "+27-XX-XXX-XXXX"
     )
 
     object SouthKorea : CountryData(
@@ -1464,7 +2437,13 @@ sealed class CountryData(
         "+82",
         "82",
         "KR",
-        "KOR"
+        "KOR",
+        "KRW",
+        "South Korean won",
+        "₩",
+        "Seoul",
+        "Asia",
+        "+82-XX-XXX-XXXX"
     )
 
     object SouthSudan : CountryData(
@@ -1473,7 +2452,13 @@ sealed class CountryData(
         "+211",
         "211",
         "SS",
-        "SSD"
+        "SSD",
+        "SSP",
+        "South Sudanese pound",
+        "£",
+        "Juba",
+        "Africa",
+        "+211-XX-XXX-XXXX"
     )
 
     object Spain : CountryData(
@@ -1482,7 +2467,13 @@ sealed class CountryData(
         "+34",
         "34",
         "ES",
-        "ESP"
+        "ESP",
+        "EUR",
+        "euro",
+        "€",
+        "Madrid",
+        "Europe",
+        "+34(XXX)XXX-XXX"
     )
 
     object SriLanka : CountryData(
@@ -1491,7 +2482,13 @@ sealed class CountryData(
         "+94",
         "94",
         "LK",
-        "LKA"
+        "LKA",
+        "LKR",
+        "Sri Lankan rupee",
+        "Rs  රු",
+        "Sri Jayawardenepura Kotte",
+        "Asia",
+        "+94-XX-XXX-XXXX"
     )
 
     object Sudan : CountryData(
@@ -1500,7 +2497,13 @@ sealed class CountryData(
         "+249",
         "249",
         "SD",
-        "SDN"
+        "SDN",
+        "SDG",
+        "Sudanese pound",
+        "ج.س",
+        "Khartoum",
+        "Africa",
+        "+249-XX-XXX-XXXX"
     )
 
     object Suriname : CountryData(
@@ -1509,7 +2512,13 @@ sealed class CountryData(
         "+597",
         "597",
         "SR",
-        "SUR"
+        "SUR",
+        "SRD",
+        "Surinamese dollar",
+        "$",
+        "Paramaribo",
+        "South America",
+        "+597-XXX-XXX"
     )
 
     object Sweden : CountryData(
@@ -1518,7 +2527,13 @@ sealed class CountryData(
         "+46",
         "46",
         "SE",
-        "SWE"
+        "SWE",
+        "SEK",
+        "Swedish krona",
+        "kr",
+        "Stockholm",
+        "Europe",
+        "+46-XX-XXX-XXXX"
     )
 
     object Switzerland : CountryData(
@@ -1527,7 +2542,13 @@ sealed class CountryData(
         "+41",
         "41",
         "CH",
-        "CHE"
+        "CHE",
+        "CHF",
+        "Swiss franc",
+        "Fr.",
+        "Bern",
+        "Europe",
+        "+41-XX-XXX-XXXX"
     )
 
     object Syria : CountryData(
@@ -1536,7 +2557,13 @@ sealed class CountryData(
         "+963",
         "963",
         "SY",
-        "SYR"
+        "SYR",
+        "SYP",
+        "Syrian pound",
+        "£",
+        "Damascus",
+        "Asia",
+        "+963-XX-XXXX-XXX"
     )
 
     object Taiwan : CountryData(
@@ -1545,7 +2572,13 @@ sealed class CountryData(
         "+886",
         "886",
         "TW",
-        "TWN"
+        "TWN",
+        "TWD",
+        "New Taiwan dollar",
+        "$",
+        "Taipei",
+        "Asia",
+        "+886-XXXX-XXXX"
     )
 
     object Tajikistan : CountryData(
@@ -1554,7 +2587,13 @@ sealed class CountryData(
         "+992",
         "992",
         "TJ",
-        "TJK"
+        "TJK",
+        "TJS",
+        "Tajikistani somoni",
+        "ЅМ",
+        "Dushanbe",
+        "Asia",
+        "+992-XX-XXX-XXXX"
     )
 
     object Tanzania : CountryData(
@@ -1563,7 +2602,13 @@ sealed class CountryData(
         "+255",
         "255",
         "TZ",
-        "TZA"
+        "TZA",
+        "TZS",
+        "Tanzanian shilling",
+        "Sh",
+        "Dodoma",
+        "Africa",
+        "+255-XX-XXX-XXXX"
     )
 
     object Thailand : CountryData(
@@ -1572,7 +2617,13 @@ sealed class CountryData(
         "+66",
         "66",
         "TH",
-        "THA"
+        "THA",
+        "THB",
+        "Thai baht",
+        "฿",
+        "Bangkok",
+        "Asia",
+        "+66-XX-XXX-XXX"
     )
 
     object TimorLeste : CountryData(
@@ -1581,7 +2632,13 @@ sealed class CountryData(
         "+670",
         "670",
         "TL",
-        "TLS"
+        "TLS",
+        "USD",
+        "United States dollar",
+        "$",
+        "Dili",
+        "Oceania",
+        "+670-78X-XXXXX"
     )
 
     object Togo : CountryData(
@@ -1590,7 +2647,13 @@ sealed class CountryData(
         "+228",
         "228",
         "TG",
-        "TGO"
+        "TGO",
+        "XOF",
+        "West African CFA franc",
+        "Fr",
+        "Lomé",
+        "Africa",
+        "+228-XX-XXX-XXX"
     )
 
     object Tonga : CountryData(
@@ -1599,7 +2662,13 @@ sealed class CountryData(
         "+676",
         "676",
         "TO",
-        "TON"
+        "TON",
+        "TOP",
+        "Tongan paʻanga",
+        "T$",
+        "Nuku'alofa",
+        "Oceania",
+        "+676-XXXXX"
     )
 
     object TrinidadAndTobago : CountryData(
@@ -1608,7 +2677,13 @@ sealed class CountryData(
         "+1 868",
         "1868",
         "TT",
-        "TTO"
+        "TTO",
+        "TTD",
+        "Trinidad and Tobago dollar",
+        "$",
+        "Port of Spain",
+        "North America",
+        "+1(868)XXX-XXXX"
     )
 
     object Tunisia : CountryData(
@@ -1617,7 +2692,13 @@ sealed class CountryData(
         "+216",
         "216",
         "TN",
-        "TUN"
+        "TUN",
+        "TND",
+        "Tunisian dinar",
+        "د.ت",
+        "Tunis",
+        "Africa",
+        "+216-XX-XXX-XXX"
     )
 
     object Turkey : CountryData(
@@ -1626,7 +2707,13 @@ sealed class CountryData(
         "+90",
         "90",
         "TR",
-        "TUR"
+        "TUR",
+        "TRY",
+        "Turkish lira",
+        "₺",
+        "Ankara",
+        "Europe",
+        "+90(XXX)XXX-XXXX"
     )
 
     object Turkmenistan : CountryData(
@@ -1635,7 +2722,13 @@ sealed class CountryData(
         "+993",
         "993",
         "TM",
-        "TKM"
+        "TKM",
+        "TMT",
+        "Turkmenistan manat",
+        "m",
+        "Ashgabat",
+        "Asia",
+        "+993-X-XXX-XXXX"
     )
 
     object Tuvalu : CountryData(
@@ -1644,7 +2737,13 @@ sealed class CountryData(
         "+688",
         "688",
         "TV",
-        "TUV"
+        "TUV",
+        "AUD",
+        "Australian dollar",
+        "$",
+        "Funafuti",
+        "Oceania",
+        "+688-2XXXX"
     )
 
     object Uganda : CountryData(
@@ -1653,7 +2752,13 @@ sealed class CountryData(
         "+256",
         "256",
         "UG",
-        "UGA"
+        "UGA",
+        "UGX",
+        "Ugandan shilling",
+        "Sh",
+        "Kampala",
+        "Africa",
+        "+256(XXX)XXX-XXX"
     )
 
     object Ukraine : CountryData(
@@ -1662,7 +2767,13 @@ sealed class CountryData(
         "+380",
         "380",
         "UA",
-        "UKR"
+        "UKR",
+        "UAH",
+        "Ukrainian hryvnia",
+        "₴",
+        "Kyiv",
+        "Europe",
+        "+380(XX)XXX-XX-XX"
     )
 
     object UnitedArabEmirates : CountryData(
@@ -1671,7 +2782,13 @@ sealed class CountryData(
         "+971",
         "971",
         "AE",
-        "ARE"
+        "ARE",
+        "AED",
+        "United Arab Emirates dirham",
+        "د.إ",
+        "Abu Dhabi",
+        "Asia",
+        "+971-X-XXX-XXXX"
     )
 
     object UnitedKingdom : CountryData(
@@ -1680,7 +2797,13 @@ sealed class CountryData(
         "+44",
         "44",
         "GB",
-        "GBR"
+        "GBR",
+        "GBP",
+        "British pound",
+        "£",
+        "London",
+        "Europe",
+        ""
     )
 
     object UnitedStates : CountryData(
@@ -1689,7 +2812,13 @@ sealed class CountryData(
         "+1",
         "1",
         "US",
-        "USA"
+        "USA",
+        "USD",
+        "United States dollar",
+        "$",
+        "Washington, D.C.",
+        "North America",
+        "+1(XXX)XXX-XXXX"
     )
 
     object Uruguay : CountryData(
@@ -1698,7 +2827,13 @@ sealed class CountryData(
         "+598",
         "598",
         "UY",
-        "URY"
+        "URY",
+        "UYU",
+        "Uruguayan peso",
+        "$",
+        "Montevideo",
+        "South America",
+        "+598-X-XXX-XX-XX"
     )
 
     object Uzbekistan : CountryData(
@@ -1707,7 +2842,13 @@ sealed class CountryData(
         "+998",
         "998",
         "UZ",
-        "UZB"
+        "UZB",
+        "UZS",
+        "Uzbekistani soʻm",
+        "so'm",
+        "Tashkent",
+        "Asia",
+        "+998-XX-XXX-XXXX"
     )
 
     object Vanuatu : CountryData(
@@ -1716,7 +2857,13 @@ sealed class CountryData(
         "+678",
         "678",
         "VU",
-        "VUT"
+        "VUT",
+        "VUV",
+        "Vanuatu vatu",
+        "Vt",
+        "Port Vila",
+        "Oceania",
+        "+678-XXXXX"
     )
 
     object VaticanCity : CountryData(
@@ -1725,16 +2872,13 @@ sealed class CountryData(
         "+379",
         "379",
         "VA",
-        "VAT"
-    )
-
-    object Vietnam : CountryData(
-        R.string.vietnam,
-        R.drawable.vietnam_flag,
-        "+84",
-        "84",
-        "VN",
-        "VNM"
+        "VAT",
+        "EUR",
+        "euro",
+        "€",
+        "Vatican City",
+        "Europe",
+        "+39-6-698-XXXXX"
     )
 
     object Venezuela : CountryData(
@@ -1743,16 +2887,43 @@ sealed class CountryData(
         "+58",
         "58",
         "VE",
-        "VEN"
+        "VEN",
+        "VES",
+        "Venezuelan bolívar soberano",
+        "Bs.S.",
+        "Caracas",
+        "South America",
+        "+58(XXX)XXX-XXXX"
     )
-        
+
+    object Vietnam : CountryData(
+        R.string.vietnam,
+        R.drawable.vietnam_flag,
+        "+84",
+        "84",
+        "VN",
+        "VNM",
+        "VND",
+        "Vietnamese đồng",
+        "₫",
+        "Hanoi",
+        "Asia",
+        "+84(XXX)XXXX-XXX"
+    )
+
     object Yemen : CountryData(
         R.string.yemen,
         R.drawable.yemen_flag,
         "+967",
         "967",
         "YE",
-        "YEM"
+        "YEM",
+        "YER",
+        "Yemeni rial",
+        "﷼",
+        "Sana'a",
+        "Asia",
+        "+967-XX-XXX-XXX"
     )
 
     object Zambia : CountryData(
@@ -1761,7 +2932,13 @@ sealed class CountryData(
         "+260",
         "260",
         "ZM",
-        "ZMB"
+        "ZMB",
+        "ZMW",
+        "Zambian kwacha",
+        "ZK",
+        "Lusaka",
+        "Africa",
+        "+260-XX-XXX-XXXX"
     )
 
     object Zimbabwe : CountryData(
@@ -1770,209 +2947,12 @@ sealed class CountryData(
         "+263",
         "263",
         "ZW",
-        "ZWE"
+        "ZWE",
+        "ZWL",
+        "Zimbabwean dollar",
+        "$",
+        "Harare",
+        "Africa",
+        "+263-X-XXXXXX"
     )
-}
-
-fun getAllCountries(): List<CountryData> {
-    val countryList = mutableListOf<CountryData>()
-
-    countryList.add(CountryData.Afghanistan)
-    countryList.add(CountryData.Albania)
-    countryList.add(CountryData.Algeria)
-    countryList.add(CountryData.Andorra)
-    countryList.add(CountryData.Angola)
-    countryList.add(CountryData.AntiguaAndBarbuda)
-    countryList.add(CountryData.Argentina)
-    countryList.add(CountryData.Armenia)
-    countryList.add(CountryData.Australia)
-    countryList.add(CountryData.Austria)
-    countryList.add(CountryData.Azerbaijan)
-    countryList.add(CountryData.Bahamas)
-    countryList.add(CountryData.Bahrain)
-    countryList.add(CountryData.Bangladesh)
-    countryList.add(CountryData.Barbados)
-    countryList.add(CountryData.Belarus)
-    countryList.add(CountryData.Belgium)
-    countryList.add(CountryData.Belize)
-    countryList.add(CountryData.Benin)
-    countryList.add(CountryData.Bhutan)
-    countryList.add(CountryData.Bolivia)
-    countryList.add(CountryData.BosniaAndHerzegovina)
-    countryList.add(CountryData.Botswana)
-    countryList.add(CountryData.Brazil)
-    countryList.add(CountryData.Brunei)
-    countryList.add(CountryData.Bulgaria)
-    countryList.add(CountryData.BurkinaFaso)
-    countryList.add(CountryData.Burundi)
-    countryList.add(CountryData.CapeVerde)
-    countryList.add(CountryData.Cambodia)
-    countryList.add(CountryData.Cameroon)
-    countryList.add(CountryData.Canada)
-    countryList.add(CountryData.CentralAfricanRepublic)
-    countryList.add(CountryData.Chad)
-    countryList.add(CountryData.Chile)
-    countryList.add(CountryData.China)
-    countryList.add(CountryData.Colombia)
-    countryList.add(CountryData.Comoros)
-    countryList.add(CountryData.Congo)
-    countryList.add(CountryData.CostaRica)
-    countryList.add(CountryData.Croatia)
-    countryList.add(CountryData.Cuba)
-    countryList.add(CountryData.Cyprus)
-    countryList.add(CountryData.CzechRepublic)
-    countryList.add(CountryData.DemocraticRepublicOfCongo)
-    countryList.add(CountryData.Denmark)
-    countryList.add(CountryData.Djibouti)
-    countryList.add(CountryData.Dominica)
-    countryList.add(CountryData.DominicanRepublic)
-    countryList.add(CountryData.Ecuador)
-    countryList.add(CountryData.Egypt)
-    countryList.add(CountryData.ElSalvador)
-    countryList.add(CountryData.EquatorialGuinea)
-    countryList.add(CountryData.Eritrea)
-    countryList.add(CountryData.Estonia)
-    countryList.add(CountryData.Eswatini)
-    countryList.add(CountryData.Ethiopia)
-    countryList.add(CountryData.Fiji)
-    countryList.add(CountryData.Finland)
-    countryList.add(CountryData.France)
-    countryList.add(CountryData.Gabon)
-    countryList.add(CountryData.Gambia)
-    countryList.add(CountryData.Georgia)
-    countryList.add(CountryData.Germany)
-    countryList.add(CountryData.Ghana)
-    countryList.add(CountryData.Greece)
-    countryList.add(CountryData.Grenada)
-    countryList.add(CountryData.Guatemala)
-    countryList.add(CountryData.Guinea)
-    countryList.add(CountryData.GuineaBissau)
-    countryList.add(CountryData.Guyana)
-    countryList.add(CountryData.Haiti)
-    countryList.add(CountryData.Honduras)
-    countryList.add(CountryData.Hungary)
-    countryList.add(CountryData.Iceland)
-    countryList.add(CountryData.India)
-    countryList.add(CountryData.Indonesia)
-    countryList.add(CountryData.Iran)
-    countryList.add(CountryData.Iraq)
-    countryList.add(CountryData.Ireland)
-    countryList.add(CountryData.Israel)
-    countryList.add(CountryData.Italy)
-    countryList.add(CountryData.IvoryCoast)
-    countryList.add(CountryData.Jamaica)
-    countryList.add(CountryData.Japan)
-    countryList.add(CountryData.Jordan)
-    countryList.add(CountryData.Kazakhstan)
-    countryList.add(CountryData.Kenya)
-    countryList.add(CountryData.Kiribati)
-    countryList.add(CountryData.Kosovo)
-    countryList.add(CountryData.Kuwait)
-    countryList.add(CountryData.Kyrgyzstan)
-    countryList.add(CountryData.Laos)
-    countryList.add(CountryData.Latvia)
-    countryList.add(CountryData.Lebanon)
-    countryList.add(CountryData.Lesotho)
-    countryList.add(CountryData.Liberia)
-    countryList.add(CountryData.Libya)
-    countryList.add(CountryData.Liechtenstein)
-    countryList.add(CountryData.Lithuania)
-    countryList.add(CountryData.Luxembourg)
-    countryList.add(CountryData.Madagascar)
-    countryList.add(CountryData.Malawi)
-    countryList.add(CountryData.Malaysia)
-    countryList.add(CountryData.Maldives)
-    countryList.add(CountryData.Mali)
-    countryList.add(CountryData.Malta)
-    countryList.add(CountryData.MarshallIslands)
-    countryList.add(CountryData.Mauritania)
-    countryList.add(CountryData.Mauritius)
-    countryList.add(CountryData.Mexico)
-    countryList.add(CountryData.Micronesia)
-    countryList.add(CountryData.Moldova)
-    countryList.add(CountryData.Monaco)
-    countryList.add(CountryData.Mongolia)
-    countryList.add(CountryData.Montenegro)
-    countryList.add(CountryData.Morocco)
-    countryList.add(CountryData.Mozambique)
-    countryList.add(CountryData.Myanmar)
-    countryList.add(CountryData.Namibia)
-    countryList.add(CountryData.Nauru)
-    countryList.add(CountryData.Nepal)
-    countryList.add(CountryData.Netherlands)
-    countryList.add(CountryData.NewZealand)
-    countryList.add(CountryData.Nicaragua)
-    countryList.add(CountryData.Niger)
-    countryList.add(CountryData.Nigeria)
-    countryList.add(CountryData.NorthKorea)
-    countryList.add(CountryData.NorthMacedonia)
-    countryList.add(CountryData.Norway)
-    countryList.add(CountryData.Oman)
-    countryList.add(CountryData.Pakistan)
-    countryList.add(CountryData.Palau)
-    countryList.add(CountryData.Panama)
-    countryList.add(CountryData.PapuaNewGuinea)
-    countryList.add(CountryData.Paraguay)
-    countryList.add(CountryData.Peru)
-    countryList.add(CountryData.Philippines)
-    countryList.add(CountryData.Poland)
-    countryList.add(CountryData.Portugal)
-    countryList.add(CountryData.Qatar)
-    countryList.add(CountryData.Romania)
-    countryList.add(CountryData.Russia)
-    countryList.add(CountryData.Rwanda)
-    countryList.add(CountryData.SaintKittsAndNevis)
-    countryList.add(CountryData.SaintLucia)
-    countryList.add(CountryData.SaintVincentAndTheGrenadines)
-    countryList.add(CountryData.Samoa)
-    countryList.add(CountryData.SanMarino)
-    countryList.add(CountryData.SaoTomeAndPrincipe)
-    countryList.add(CountryData.SaudiArabia)
-    countryList.add(CountryData.Senegal)
-    countryList.add(CountryData.Serbia)
-    countryList.add(CountryData.Seychelles)
-    countryList.add(CountryData.SierraLeone)
-    countryList.add(CountryData.Singapore)
-    countryList.add(CountryData.Slovakia)
-    countryList.add(CountryData.Slovenia)
-    countryList.add(CountryData.SolomonIslands)
-    countryList.add(CountryData.Somalia)
-    countryList.add(CountryData.SouthAfrica)
-    countryList.add(CountryData.SouthKorea)
-    countryList.add(CountryData.SouthSudan)
-    countryList.add(CountryData.Spain)
-    countryList.add(CountryData.SriLanka)
-    countryList.add(CountryData.Sudan)
-    countryList.add(CountryData.Suriname)
-    countryList.add(CountryData.Sweden)
-    countryList.add(CountryData.Switzerland)
-    countryList.add(CountryData.Syria)
-    countryList.add(CountryData.Taiwan)
-    countryList.add(CountryData.Tajikistan)
-    countryList.add(CountryData.Tanzania)
-    countryList.add(CountryData.Thailand)
-    countryList.add(CountryData.TimorLeste)
-    countryList.add(CountryData.Togo)
-    countryList.add(CountryData.Tonga)
-    countryList.add(CountryData.TrinidadAndTobago)
-    countryList.add(CountryData.Tunisia)
-    countryList.add(CountryData.Turkey)
-    countryList.add(CountryData.Turkmenistan)
-    countryList.add(CountryData.Tuvalu)
-    countryList.add(CountryData.Uganda)
-    countryList.add(CountryData.Ukraine)
-    countryList.add(CountryData.UnitedArabEmirates)
-    countryList.add(CountryData.UnitedKingdom)
-    countryList.add(CountryData.UnitedStates)
-    countryList.add(CountryData.Uruguay)
-    countryList.add(CountryData.Uzbekistan)
-    countryList.add(CountryData.Vanuatu)
-    countryList.add(CountryData.VaticanCity)
-    countryList.add(CountryData.Venezuela)
-    countryList.add(CountryData.Vietnam)
-    countryList.add(CountryData.Yemen)
-    countryList.add(CountryData.Zambia)
-    countryList.add(CountryData.Zimbabwe)
-
-    return countryList.toList()
 }

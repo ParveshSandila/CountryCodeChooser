@@ -54,7 +54,7 @@ afterEvaluate {
 
                 groupId = 'com.github.parveshsandila'
                 artifactId = 'country-code-chooser'
-                version = '1.0.4'
+                version = '1.0.5'
             }
         }
     }

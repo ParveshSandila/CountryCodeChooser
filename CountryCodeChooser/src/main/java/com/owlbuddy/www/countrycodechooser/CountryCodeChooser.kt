@@ -36,6 +36,10 @@ import com.owlbuddy.www.countrycodechooser.utils.enums.CountryCodeType
 import com.owlbuddy.www.countrycodechooser.utils.sealed_casses.CountryData
 import kotlinx.coroutines.delay
 
+@Deprecated(
+    message = "Use the new variant that returns full CountryData. This will be removed after August 2026.",
+    replaceWith = ReplaceWith("CountryCodeChooser(modifier, defaultCountry, flagSize, textStyle, countryCodeType, onCountryDataSelected = { onCountySelected(it.countryCodeWithoutPrefix, it.iso2Code, it.iso3Code) })")
+)
 @Composable
 fun CountryCodeChooser(
     modifier: Modifier = Modifier,
@@ -53,6 +57,36 @@ fun CountryCodeChooser(
         iso2Code: String,
         iso3Code: String
     ) -> Unit
+) {
+    CountryCodeChooser(
+        modifier = modifier,
+        defaultCountry = defaultCountry,
+        flagSize = flagSize,
+        textStyle = textStyle,
+        countryCodeType = countryCodeType,
+        onCountryDataSelected = {
+            onCountySelected(
+                it.countryCodeWithoutPrefix,
+                it.iso2Code,
+                it.iso3Code
+            )
+        }
+    )
+}
+
+@Composable
+fun CountryCodeChooser(
+    modifier: Modifier = Modifier,
+    defaultCountry: String = "CA",
+    flagSize: DpSize = DpSize(
+        height = 20.dp,
+        width = 30.dp
+    ),
+    textStyle: TextStyle = TextStyle(
+        fontSize = 16.sp
+    ),
+    countryCodeType: CountryCodeType = CountryCodeType.FLAG,
+    onCountryDataSelected: (countryData: CountryData) -> Unit
 ) {
 
     var selectedCountry by remember {
@@ -131,11 +165,7 @@ fun CountryCodeChooser(
             onCountrySelected = {
                 selectedCountry = it
                 popupState = false
-                onCountySelected(
-                    it.countryCodeWithoutPrefix,
-                    it.iso2Code,
-                    it.iso3Code
-                )
+                onCountryDataSelected(it)
             },
             onDismissRequest = {
                 popupState = false
